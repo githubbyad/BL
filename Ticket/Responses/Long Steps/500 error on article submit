@@ -1,0 +1,15 @@
+Hi,
+
+Below are few things which will cause error-500, you should avoid it.
+
+&nbsp; &nbsp; 1. Image file name in non-english character. Please use English or numeric characters in filename.
+
+&nbsp; &nbsp; 2. Image file having larger than 5 MB size.
+
+&nbsp; &nbsp; 3. Very long heading of the article. You should try short heading.
+
+Still if you are facing issue to upload new article, please provide article's details such as heading text, picture file etc.. We will try it to see how it works.
+
+Send details on support@bulletlink.com and make sure to mention ticket number in subject line.
+
+Thank you.
