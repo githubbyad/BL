@@ -1,0 +1,21 @@
+Hi,
+
+Google Analytics will assign you account number (Web Property ID) that looks like "UA-12345678-9" tracking ID.
+
+Please follow the steps provided under below screenshot to get your website tracking ID.
+
+https://i.snipboard.io/7N8fQ9.jpg
+
+Now, please follow the below steps to update tracking ID:
+
+&nbsp; &nbsp; 1) Click on the "Settings" icon from "Site Manager".
+
+&nbsp; &nbsp; 2) Enter your account number("UA-12345678-9") under the "Google Analytics Account" field.
+
+&nbsp; &nbsp; 3) Click on "submit".
+
+It will take 24-48 hours to link your site with Google analytic, after that you should start seeing your website statistics.
+
+NOTE: Please refer to chapter "23. Website Statistics" under "Tutorials" for more information.
+
+Thank you.
