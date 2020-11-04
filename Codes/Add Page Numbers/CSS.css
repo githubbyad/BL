@@ -1,0 +1,27 @@
+#H4_pages {
+border-top: 2px solid #141414;
+float: left;
+padding-top: 10px;
+text-align: center;
+visibility: hidden;
+width: 680px;
+}
+#H4_pages a {
+background-color: #0099ff;
+width: 30px;
+height: 30px;
+display: inline-block;
+text-align: center !important;
+margin-left: 6px;
+color: white;
+font-weight: bold !important;
+line-height: 30px !important;
+border-radius: 4px;
+transition-duration: 500ms;
+}
+.H4_pages a:hover {
+box-shadow: 0px 40px 1px 0px black inset;
+transition-duration: 700ms;
+color: #fff !important;
+border-radius: 0;
+}
