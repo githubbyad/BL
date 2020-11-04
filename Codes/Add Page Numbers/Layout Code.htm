@@ -1,0 +1,49 @@
+Layout Code:
+{{LayoutH4Begin}}
+{{LayoutH4Limit25}}
+{{SortBy:Issue,Updated}}
+function GetHighlights4(){document.write('
+<div id="Highlight4" style="display:none;">
+{{RepeatBegin}}
+{{If Counter < 6}}
+<div class="ARG103 H4_1">
+<div class="ARG103_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="ARG103_img"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="ARG103_heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{ElseIf Counter < 11}}
+<div class="ARG103 H4_2" style="display;none;">
+<div class="ARG103_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="ARG103_img"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="ARG103_heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{ElseIf Counter < 16}}
+<div class="ARG103 H4_3" style="display;none;">
+<div class="ARG103_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="ARG103_img"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="ARG103_heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{ElseIf Counter < 21}}
+<div class="ARG103 H4_4" style="display;none;">
+<div class="ARG103_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="ARG103_img"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="ARG103_heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{Else}}
+<div class="ARG103 H4_5" style="display;none;">
+<div class="ARG103_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="ARG103_img"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="ARG103_heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+<div id="H4_pages" class="H4_pages" style="display: block; visibility: visible;">
+<a href="javascript:void(0)" class="H4_page1" style="background-color: black;">1</a>
+<a href="javascript:void(0)" class="H4_page2" >2</a>
+<a href="javascript:void(0)" class="H4_page3">3</a>
+<a href="javascript:void(0)" class="H4_page4">4</a>
+<a href="javascript:void(0)" class="H4_page5">5</a>
+</div>
+</div>');
+DisplayHighlight('Highlight4');}
+{{LayoutH4End}}
