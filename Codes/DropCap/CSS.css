@@ -1,0 +1,4 @@
+.default-pagebody::first-letter {
+	font-size: 20px;
+	font-weight: bold;
+}
