@@ -1,0 +1,159 @@
+Layout commands:
+{{LayoutH?Begin}} - where ? is a number,
+{{LayoutH?End}} - where ? is a number,
+{{LayoutH?Limit?}} - where ? is a number,
+{{PutHtmlChar?}} - where ? is a html code number,
+{{PutHtmlEntity?}} - where ? is a html entity number,
+{{RepeatBegin}}, {{RepeatEnd}}
+
+Section layout commands:
+{{LayoutSection?Begin}} - where ? is a PKEY number,
+{{LayoutSection?End}} - where ? is a PKEY number,
+{{LayoutSection?Limit?}} - where ? is a PKEY number
+
+Use this command under 'Section (Layout)' under Menus
+Example:{{LayoutSection#SubMenuId#Begin}}
+<> - This is the submenu ID
+<> - This command combines values from both Articles Per Page and Archives Per Page .
+<> - This holds value from "Articles Per Page".
+<> - This holds value from "Archives Per Page".
+
+Section preview layout commands:
+{{LayoutPreview?Begin}} - where ? is a PKEY number,
+{{LayoutPreview?End}} - where ? is a PKEY number,
+{{LayoutPreview?Limit?}} - where ? is a PKEY number
+
+Apps layout commands:
+{{LayoutArticlesApps?Begin}} - where ? is a PKEY number,
+{{LayoutArticlesApps?End}} - where ? is a PKEY number,
+{{LayoutArticlesApps?Limit?}} - where ? is a PKEY number
+
+Menu layout commands:
+{{LayoutMenus?Begin}} - where ? is a number,
+{{LayoutMenus?End}} - where ? is a number,
+{{MakePopupScriptLinks:Yes}} - this creates popup links
+{{Where:MenuTypeInclude:?,?,?}} - where ? is 'Default', 'Hidden', 'Horizontal', 'Vertical', 'SandwichHorizontal', 'SandwichVertical' (If this command is nor present, all menus will be picked up.)
+
+{{RepeatBegin1}}, {{RepeatEnd1}}, {{RepeatBegin2}}, {{RepeatEnd2}},
+{{Menu}}, {{MenuApps}}, {{MenuId}}, {{MenuStyle}}, {{MenuHTML}}, {{CSSColumns}}, {{MenuMouseOverCode}}
+{{MenuNoRepeat}}
+{{SubMenu}}, {{SubMenuApps}}, {{SubMenuId}}, {{SubMenuLink}}, {{SubMenuStyle}}, {{SubMenuHTML}}, {{CSSDisplay}}
+{{SubMenuNoRepeat}}, {{SubMenuLinkNoRepeat}}, {{SubMenuNoRepeatCSSDisplay}}
+{{SubMenuMouseInOutColor}}
+
+Article layout commands:
+{{LayoutArticle?Begin}} - where ? is a number,
+{{LayoutArticle?End}} - where ? is a number,
+{{LayoutArticle?Limit?}} - where ? is a number,
+{{LayoutArticleGroup?Begin}} - where ? is a number,
+{{LayoutArticleGroup?End}} - where ? is a number,
+{{LayoutArticleGroup?Limit?}} - where ? is a number,
+{{LayoutMenuLimit?}} ? is a number of menus,
+{{LayoutMenuArticlesLimit?}} ? is a number articles per menu,
+{{Where:MaxIssue}} - This restricts articles to latest issue date.
+{{Where:SubMenuIdInclude:?,?,?}} - where ? is a number or use ALL
+{{Where:SubMenuIdExclude:?,?,?}} - where ? is a number or use ALL
+{{ExcludeKeywords:?,?,?}} - where ? is keyword from article heading/body. This will remove entire article from any layout.
+{{Where:HighlightAllExclude}} - This excludes ALL highlights flag set to Yes
+{{Where:HighlightAllInclude}} - This includes ALL highlights flag set to Yes
+{{Where:HighlightInclude:?,?,?}} - where ? is a highlight number
+{{Where:MaxDaysUpdated:?}}- ? is number of past days to restrict articles
+{{Where:MaxDaysIssue:?}} - ? is number of past days to restrict articles.
+{{Where:MaxDaysCreated:?}} - ? is number of past days to restrict articles.
+{{Where:MaxDaysStarting:?}} - ? is number of past days to restrict articles.
+{{SkipArticles?}} - where ? is a number,
+{{ReplaceJavascriptChars:No}}
+{{RemoveHTMLBody}} - This strips HTML code from body.
+{{RemoveMore:Yes}} - This removes {{more}} command from articles body.
+{{RemoveMoreFully:Yes}} - This removes {{more}} command from articles body and entire article is displayed
+{{MakeMobileLinks:Yes}}
+{{MakeAppLinks:Yes}}
+{{MakeFullLinks:Yes}}
+{{MakeStaticLinks:Yes}} - This will keep same URL even we have updated article heading, sub-menus.
+{{LayoutArticleBodyWordLimit?}} - where ? is a number,
+{{SortBy:?}} - where ? could be Issue, Updated, Created or Menu. Asc, Dsc. Use commas if multiple sort is needed.
+{{BlankValue-Image1:?}} - where ? is image file name or use blank.gif
+{{Month?}} - where ? is U, I or C, shows month number
+{{Month?1}} - where ? is U, I or C, shows 3 letter month name
+{{Month?2}} -> where ? is U, I or C, shows 3 letter month name in upper case
+{{Month?3}} -> where ? is U, I or C, shows month name in upper/lower case
+{{Month?4}} -> where ? is U, I or C, shows month name in upper case
+{{Day?}} - where ? is U, I or C, shows day number
+{{Day?1}} - where ? is U, I or C, shows day number plus two letter
+{{Year?}} - where ? is U, I or C, shows year
+{{DayName?1}} - where ? is U, I or C, shows 3 letter week day name
+{{DayName?2}} - where ? is U, I or C, shows 3 letter week day name in upper case
+{{DayName?3}} - where ? is U, I or C, shows week day name in upper/lower case
+{{DayName?4}} - where ? is U, I or C, shows week day name in upper case
+{{BlankValue-TotalArticles}} - makes layout blank if no articles found,
+{{TotalArticles}}
+{{PutFullHName}}  - this puts full url like https://xyz.com
+{{PutHCompany}} - this puts hosting company like https://bulletlink.com or https://xyz.com where all common files will come from.
+
+{{Heading}}, {{HeadingLink}}, {{HeadingImage}}, {{HeadingImageAlt}}
+{{HeadingDisplay}} - sets style display:none,
+{{IssueDate}}, {{StartingDate}}, {{By}}, {{Source}}, {{Body}},
+{{Picture1}}, {{Picture1Caption}}, {{PictureCaption}},
+{{AllowComments}}, {{ShareToolsTop}}, {{ShareToolsBottom}}
+
+{{PictureT}} - This only works for first picture {{Picture1}}.
+
+
+
+{{Counter}}, {{CounterSubMenu}},
+{{CounterAlphaUpperCase}}, {{CounterAlphaLowerCase}}
+{{CounterRomanUpperCase}}, {{CounterRomanLowerCase}}
+
+{{MetaTitle}}
+{{MetadDescription}}
+{{MetaKeywords}}
+
+Other commands:
+{{File:?}} where ? is file name. Ex: articlegroup300.js
+{{HighlightBackgroundImage}}
+
+{{If Counter... some code...
+{{EndIf}}
+
+{{If Counter... some code...
+{{Else}}
+... some code...
+{{EndIf}}
+
+{{If Counter... some code...
+{{ElseIf Counter... some code...
+{{Else}}
+... some code...
+{{EndIf}}
+
+{{If LastRecordMenu=?}} - where ? is either 0 or 1
+... some code...
+{{Else}}
+... some code...
+{{EndIf}}
+
+{{If LastRecordSubMenu=?}} - where ? is either 0 or 1
+... some code...
+{{Else}}
+... some code...
+{{EndIf}}
+
+
+* Currently two variables used for {{If}} command: Counter and Picture1 (See above examples). We will add as required. When using Counter, use number in place of ?, When using Picture1, use Blank if you want to test blank value to hide image.
+* Use Comparison operator such as <, >, <=, >=, <> and = with {{If}} command.
+
+{{Holder?}} - where ? is a number between 1 and 3
+[[Holder?: ... some code ... ]] - holds value for {{Holder?}} command
+
+NOTE: You can put extra code by using : command within commands. Example: {{By:???}} or {{???:Source}} or {{???:Source:???}} where ??? can be any text or code. ??? will be printed only when value on By or Source exists.
+
+
+
+{{Find&ReplaceColumn:?1,?2,?3}} is added to find and replace char or string.
+ Where ?1 = find, ?2 = replace, ?3 = field
+ Example1: {{Find&ReplaceColumn:Body,xyz,abc}}
+ Above example replaces xyz with abc in the Body field of the articles.
+ Example2: {{Find&ReplaceColumn:Body,$D13$D10,<<br>>}}
+ Above example replaces ASCII decimal code 13 and 10 with <<br>> in the Body field of the articles.
+ 
+{{Find&ReplaceString:?1,?2}} is added to find and replace char or string. 
