@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script src="https://bulletlink.com/JQuery/jquery.js" type="text/javascript"/>
+<style>
+.front-image { behavior: url(iepngfix.htc) }
+#pageflip {
+position: absolute;
+right: 0; 
+top: 0;
+float: right;
+}
+#pageflip img {
+width: 50px; 
+height: 52px;
+z-index: 99;
+position: absolute;
+right: 0; 
+top: 0;
+-ms-interpolation-mode: bicubic;
+}
+#pageflip .back-img {
+width: 50px; 
+height: 50px;
+overflow: hidden;
+position: absolute;
+right: 0; 
+top: 0;
+z-index:98;
+background: url(https://2.bp.blogspot.com/-ozIbZSc4kLo/T1SpesMOYpI/AAAAAAAAAKM/NtX4Wf48t_o/s200/rss+netoops+blog+page+peel.png) no-repeat right top #fff;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+//Page Flip on hover
+$("#pageflip").hover(function() {
+$("#pageflip img , .back-img").stop()
+.animate({
+width: "307px",
+height: "319px"
+}, 500);
+} , function() {
+$("#pageflip img").stop()
+.animate({
+width: "50px",
+height: "52px"
+}, 220);
+$(".back-img").stop()
+.animate({
+width: "50px",
+height: "50px"
+}, 200);
+});
+});
+</script>
+</head>
+
+<body>
+<div id="pageflip">
+<a href="http://feeds.feedburner.com/NetOopsBlogTips "><img alt="netoops blog" class="front-image" src="https://2.bp.blogspot.com/_1fRuBdlSpLw/TJcc3k62mWI/AAAAAAAAAps/uSj6nCe_CB4/s1600/page_flip.png"/></a>
+<div class="back-img"/></div>
+</div>
+</body>
+</html>
