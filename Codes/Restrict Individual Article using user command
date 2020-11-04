@@ -1,0 +1,1 @@
+{{UserCommandPaidBegin}}<script>$(document).ready(function () {if (readCookie('loginStatus') != 'Yes') {createCookie('curl',window.location);window.location.href = '/target_form2.asp?smenu=&pform={{Login}}';}});</script>{{UserCommandPaidEnd}}
