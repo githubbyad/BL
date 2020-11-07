@@ -1,0 +1,302 @@
+﻿.mainbody {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	border: 1px solid #cccccc;
+}
+.cc6 
+{
+    background-color: rgb(47, 68, 87);
+    padding-bottom: 8px;
+    padding-top: 8px;
+    vertical-align: top;
+}
+.cc8 {
+    border-top-color: rgb(163, 213, 234);
+    border-top-style: solid;
+    border-top-width: 2px;
+    vertical-align: top;
+    width: 1000px;
+}
+.cc9 {
+    height: 20px;
+    vertical-align: middle;
+}
+.cc11 {
+    border-top-color: rgb(163, 213, 234);
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 8px;
+    padding-top: 8px;
+    vertical-align: top;
+    width: 1000px;
+}
+.cc12 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    vertical-align: top;
+}
+.cc13 {
+    height: 8px;
+    vertical-align: top;
+    width: 1000px;
+}
+.column1 {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    background-color: rgb(255, 255, 255);
+    text-transform: none;
+}
+.cc14 {
+    vertical-align: top;
+    width: 150px;
+}
+.cc18 {
+    vertical-align: top;
+    width: 8px;
+}
+.vrule {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    background-color: rgb(255, 255, 255);
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: rgb(190, 212, 212);
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: dotted;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    text-transform: none;
+}
+.cc35 {
+    vertical-align: top;
+    width: 502px;
+}
+.cc22 {
+    vertical-align: top;
+    width: 8px;
+}
+.cc24 {
+    vertical-align: top;
+    width: 150px;
+}
+.cc26 {
+    vertical-align: top;
+    width: 8px;
+}
+.cc28 {
+    vertical-align: top;
+    width: 150px;
+}
+.cc29 {
+    border-bottom-color: rgb(39, 113, 186);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 10px;
+    vertical-align: top;
+    width: 1000px;
+}
+.cc30 {
+    height: 40px;
+    padding-left: 8px;
+    vertical-align: middle;
+    width: 30px;
+}
+.cc31 {
+    vertical-align: middle;
+    width: 940px;
+}
+.cc33 {
+    height: 40px;
+    padding-right: 8px;
+    vertical-align: middle;
+    width: 30px;
+}
+.cc34 {
+    border-top-color: rgb(39, 113, 186);
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 10px;
+    vertical-align: top;
+    width: 1000px;
+}
+.ccft {
+    
+}
+
+
+/* *** BEGIN: General CSS *** */
+.last_div {
+    float: left;
+    margin-top: 8px;
+    position: relative;
+    width: 440px;
+}
+.Highlight1_part {
+    float: left;
+    padding-left: 10px;
+    width: 430px;
+}
+.Logo_Ad14 {width:1140px; margin-left:auto; margin-right:auto; overflow:hidden;clear:both; background-color:rgb(47, 68, 87); padding:5px;}
+.logo{width:1000px;overflow:hidden;}
+.logo img {max-width:1000px;overflow:hidden;}
+.AdGroup14{display:none;}
+
+.TopLinks_part {
+    background: #495e71 none repeat scroll 0 0;
+    border-bottom: 3px solid #2f4457;
+    border-left: 3px solid #2f4457;
+    border-right: 3px solid #2f4457;
+    overflow: hidden;
+    padding-bottom: 3px;
+    width: 1144px;
+}
+.toplinks {
+    color: #ffffff !important;
+    font-family: roboto condensed !important;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+.thumb1, .link1, .date1 {
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.link1 {
+    margin-right: 10px;
+}
+.ContactInformation {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.menuH {
+    background: #495e71 none repeat scroll 0 0;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 1150px;
+}
+.Google_search_box {background-color:#C9DEDE; Height: 30px; padding: 5px;}
+.bodyContent {width:1000px: overflow:hidden; margin-top:10px; float:left}
+.firstColumn, .thirdColumn, .fourthColumn {
+  width: 200px;
+  overflow: hidden;
+  margin:8px 0 8px 5px;
+  float:left;
+  display:inline-block;
+}
+.firstColumn {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.thirdColumn {padding:0px 10px;}
+.fourthColumn {
+	padding-left: 8px;
+}
+.firstColumn, .secondColumn, .thirdColumn  {
+  border-right:1px dotted #bed4d4;
+}
+.secondColumn {
+    display: inline-block;
+    float: left;
+    margin: 8px 0;
+    overflow: hidden;
+    padding-right: 7px;
+    width: 700px;
+}
+
+.Poll1, .AdGroup13 {
+  width: 200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.AdGroup13 img, .AdGroup11 img, .AdGroup15 img {
+  max-width: 200px;
+  overflow: hidden;
+}
+.AdGroup12 img {
+	max-width:700px;
+	overflow:hidden
+}
+.footer {
+    background: #2f4457 none repeat scroll 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 1150px;
+}
+.PoweredByLine {
+    background-color: #495e71;
+    margin-top: 15px;
+    width: 300px;
+}
+
+
+.GoTop1, .GoTop2 {
+  width: 30px;
+  display:inline-block;
+}
+
+.GoTop1 {
+  float: left;
+}
+
+.GoTop2 {
+  float: right;
+}
+
+.BottomLinks {
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  display:inline-block;
+}
+
+.power {
+    color: white;
+    font-size: 12px;
+}
+.fa.fa-home {
+    color: #ffffff;
+    font-size: 18px;
+}
+.fa.fa-mobile {
+    font-size: 24px;
+    margin-top: -3px;
+    color: #ffffff;
+}
+.copyright {
+    color: white !important;
+    font-family: roboto condensed !important;
+    font-size: 16px !important;
+}
+.AdGroup12 {
+    float: left;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.HitCounter {
+    padding-bottom: 5px;
+}
+/* *** END: General CSS *** */
