@@ -81,13 +81,14 @@ td span {
 	font-size: 30px;
 }
 .cw {
-  animation: cws 2s infinite;
+  animation: cws 3s infinite;
   background: highlight;
   transition: 200ms linear;
 }
 @keyframes cws {
-  from {transform: scale(1);}
-  to {transform: scale(1.05);}
+  0% {transform: scale(1);}
+   60% {transform: scale(1.05);}
+  100% {transform: scale(1);}
 }
 h3 {
 	float: right;
