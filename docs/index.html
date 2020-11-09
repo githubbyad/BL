@@ -80,8 +80,9 @@ td span {
 	color: red;
 	font-size: 30px;
 }
-.cw {
+.cw:hover {
   animation: cws 3s infinite;
+  opacity: 1;
   background: highlight;
   transition: 200ms linear;
 }
@@ -101,7 +102,6 @@ h3 {
 <body class="body">
 <div class="wrap">
     <h1>HOME PAGE EDITOR - <span>Issues/Requests</span></h1>
-    <h3>*Highlighting box means "Currently Working".</h3>
     <table cellspacing="0">
         <tr class="head">
             <td>No.</td>
@@ -144,7 +144,7 @@ h3 {
             <td class="f">FIXED<br><i>(by Sir)</i></td>
         </tr>
         <tr class="cw" title="Currently Working">
-            <td>8</td>
+            <td>8 <span>*</span></td>
             <td>How to update say Sport page, Form page, Service package</td>
             <td class="s">PENDING<br><i>(60% done. Only issue with Forms.)</i></td>
         </tr>
