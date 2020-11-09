@@ -76,11 +76,31 @@ tr:hover {
 .head td {
   text-align: center !important;
 }
+td span {
+	color: red;
+	font-size: 30px;
+}
+.cw {
+  animation: cws 2s infinite;
+  background: highlight;
+  transition: 200ms linear;
+}
+@keyframes cws {
+  from {transform: scale(1);}
+  to {transform: scale(1.05);}
+}
+h3 {
+	float: right;
+	color: highlight;
+}
+
+
 </style>
 </head>
 <body class="body">
 <div class="wrap">
     <h1>HOME PAGE EDITOR - <span>Issues/Requests</span></h1>
+    <h3>*Highlighting box means "Currently Working".</h3>
     <table cellspacing="0">
         <tr class="head">
             <td>No.</td>
@@ -122,10 +142,10 @@ tr:hover {
             <td>Allow update as per user restrictions (Example: if user do not have poll access, do not allow to update)</td>
             <td class="f">FIXED<br><i>(by Sir)</i></td>
         </tr>
-        <tr>
+        <tr class="cw" title="Currently Working">
             <td>8</td>
             <td>How to update say Sport page, Form page, Service package</td>
-            <td class="s">PENDING</td>
+            <td class="s">PENDING<br><i>(60% done. Only issue with Forms.)</i></td>
         </tr>
         <tr>
             <td>9</td>
