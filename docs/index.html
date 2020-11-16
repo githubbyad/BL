@@ -35,6 +35,9 @@ $('.tdd').each(function(){
     }
   }
 });
+$('.v').each(function(){
+$(this).parent('tr').addClass('odx');
+});
 });
 </script>
 <style>
@@ -217,6 +220,9 @@ tr {
 .latest.o1 {
   order: 1;
 }
+.odx {
+	order: 10;
+}
 </style>
 </head>
 <body class="body">
@@ -316,7 +322,7 @@ tr {
         </tr>
         <tr>
             <td>13</td>   
-            <td>Client site edit article limits<br>()</td>
+            <td>Client site edit article limits</td>
             <td class="v">Version 2</td>
             <td>Highlight limit, Preview limit, ArticleGroup limit</td>
             <td class="novx"></td>
