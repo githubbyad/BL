@@ -24,6 +24,15 @@ $('.tdd').each(function(){
     if($(this).text() == d1 || $(this).text() == d2 || $(this).text() == d3) {
       $(this).parent('tr').addClass('latest');
     }
+    if($(this).text() == d1) {
+      $(this).parent('tr').addClass('o1');
+    }
+    if($(this).text() == d2) {
+      $(this).parent('tr').addClass('o2');
+    }
+    if($(this).text() == d3) {
+      $(this).parent('tr').addClass('o3');
+    }
   }
 });
 });
@@ -164,6 +173,50 @@ h3 {
 	content: " Dec";
 }
 
+tbody {
+  display: flex;
+  width: 100%;
+  /*! justify-content: center; */
+  /*! align-items: center; */
+  /*! float: left; */
+  flex-flow: wrap;
+  /*! flex-wrap: wrap; */
+  flex-direction: column;
+}
+tr td:nth-child(1) {
+  width: 30px;
+}
+tr td:nth-child(2) {
+  width: 500px;
+}
+tr td:nth-child(3) {
+  width: 100px;
+}
+tr td:nth-child(4) {
+  width: 300px;
+}
+tr td:nth-child(5) {
+  width:80px;
+}
+tr {
+  width: 100%;
+  order: 4;
+}
+.wrap {
+  width: 1116px;
+}
+.latest.o2 {
+  order: 2;
+}
+.head {
+  order: 0;
+}
+.latest.o3 {
+  order: 3;
+}
+.latest.o1 {
+  order: 1;
+}
 </style>
 </head>
 <body class="body">
