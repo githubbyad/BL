@@ -1,6 +1,33 @@
 <html>
 <head>
+  <script type="text/javascript" src="https://bulletlink.com/JQuery/jquery.js"></script>
     <title>HOME PAGE EDITOR - Issues / Requests</title>
+<script>
+$(document).ready(function(){
+var MyDate = new Date();
+var datex;
+var monthx;
+
+MyDate.setDate(MyDate.getDate());
+
+datex = ('0' + MyDate.getDate()).slice(-2);
+monthx =  ('0' + (MyDate.getMonth()+1)).slice(-2);
+
+$('.date').text(datex);
+$('.month').text(monthx);
+var d = parseInt($('.date').text());
+var d1 = d
+var d2 = d1 - 1;
+var d3 = d1 - 2;
+$('.tdd').each(function(){
+  if($(this).attr('data-month') == "11") {
+    if($(this).text() == d1 || $(this).text() == d2 || $(this).text() == d3) {
+      $(this).parent('tr').addClass('latest');
+    }
+  }
+});
+});
+</script>
 <style>
 
 .body {
@@ -112,17 +139,29 @@ tr td:nth-child(3) {
   background: highlight;
   transition: 200ms linear;
 }
-@keyframes cws {
-  0% {transform: scale(1);}
-   60% {transform: scale(1.05);}
-  100% {transform: scale(1);}
+.latest td:nth-child(1)::before {
+	content: "*";
+	color: red;
+	font-size: 35px;
+  animation:ddd 2s infinite;
+}
+@keyframes ddd {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 h3 {
 	float: right;
 	color: highlight;
 }
-.nov::after {
+.tdd[data-month="11"]::after {
 	content: " Nov";
+}
+.tdd[data-month="12"]::after {
+	content: " Dec";
 }
 
 </style>
@@ -141,25 +180,25 @@ h3 {
             <td>1</td>
             <td>Add menu automatically when adding content throughout system where appropriate<br>(Example: Preview section add menu automatically and under highlight keep menu blank to pick anyone)</td>
             <td class="f">FIXED</td>
-            <td class="nov">04</td>
+            <td class="tdd" data-month="11">04</td>
         </tr>
         <tr>
             <td>2</td>
             <td>PageDesigner issue</td>
             <td class="f">FIXED</td>
-		        <td class="nov">04</td>
+		        <td class="tdd" data-month="11">04</td>
         </tr>
         <tr>
             <td>3</td>
             <td>We cannot see Article list having Highlight excluded. This is for Previews and ArticleGroup</td>
             <td class="v3">Not Required<br><i>(We can now modify individual Articles, so this request is not required.)</i></td>
-            <td class="nov">15</td>
+            <td class="tdd" data-month="11">15</td>
         </tr>
         <tr>
             <td>4</td>
             <td>Hide Highlight when not required</td>
             <td class="f">FIXED</td>
-            <td class="nov">05</td>
+            <td class="tdd" data-month="11">05</td>
         </tr>
         <tr>
             <td>5</td>
@@ -171,31 +210,31 @@ h3 {
             <td>6</td>
             <td>Could we show the edit button where the mouse is. Issue: Long highlights or long list of adgroup may not be visible.</td>
             <td class="f">FIXED<br><i>(Button will not go down after 500px height)</i></td>
-            <td class="nov">09</td>
+            <td class="tdd" data-month="11">09</td>
         </tr>
         <tr>
             <td>7</td>
             <td>Allow update as per user restrictions (Example: if user do not have poll access, do not allow to update)</td>
             <td class="f">FIXED<br><i>(by Sir)</i></td>
-            <td class="nov">08</td>
+            <td class="tdd" data-month="11">08</td>
         </tr>
-        <tr class="cw" title="Currently Working">
-            <td>8 <span>*</span></td>
+        <tr>
+            <td>8</td>
             <td>How to update say Sport page, Form page, Service package</td>
             <td class="s">PENDING<br><i>(60% done. Only issue with Forms on Folder Sites.)</i></td>
-            <td class="nov">12</td>
+            <td class="tdd" data-month="11">12</td>
         </tr>
         <tr>
             <td>9</td>
             <td>Sometimes Chrome is not showing updated changes after submit. No issue with Firefox.</td>
             <td class="f">FIXED<br><i>(Added reload JS after submit.)</i></td>
-            <td class="nov">14</td>
+            <td class="tdd" data-month="11">14</td>
         </tr>
         <tr>
             <td>10</td>
             <td>Choose the same color theme on the "Home Page Editor" line.</td>
             <td class="f">FIXED</td>
-            <td class="nov">15</td>
+            <td class="tdd" data-month="11">15</td>
         </tr>
         <tr>
             <td>11</td>
@@ -207,7 +246,7 @@ h3 {
             <td>12</td>
             <td>Add New article Directly. Means, need to add separate "Add" Button.</td>
             <td class="f">FIXED</td>
-            <td class="nov">08</td>
+            <td class="tdd" data-month="11">08</td>
         </tr>
         <tr>
             <td>13</td>   
@@ -237,50 +276,50 @@ h3 {
             <td>17</td>
             <td>Homepage Editor for Mobile</td>
             <td class="v3">Not Required<br><i>(Normally all Editors are only created for Desktop screen)</i></td>
-            <td class="nov">05</td>
+            <td class="tdd" data-month="11">05</td>
             
         </tr>
         <tr>
             <td>18</td>
             <td>Homepage Editor takes more time in loading.</td>
             <td class="f">FIXED<br><i>(Now it will load site within 6 seconds)</i></td>
-            <td class="nov">05</td>
+            <td class="tdd" data-month="11">05</td>
         </tr>
         <tr>
             <td>19</td>
             <td>Editor for Spcific Articles</td>
             <td class="f">FIXED</td>
-            <td class="nov">12</td>
+            <td class="tdd" data-month="11">12</td>
         </tr>
-        <tr class="cw" title="Currently Working">
-            <td>20 <span>*</span></td>
+        <tr>
+            <td>20</td>
             <td>Editor for Spcific Ads</td>
             <td class="s">PENDING<br><i>(Applied changes for Normal Ads. Waiting for Sir to print "Ad ID" for other Ad Types)</i></td>
-            <td class="nov">16</td>
+            <td class="tdd" data-month="11">16</td>
         </tr>
         <tr>
             <td>21</td>
             <td>List2.asp, Form2.asp, etc. URLs are visible to all. Need to hide them to avoid Hacking.</td>
             <td class="s">PENDING<br><i>(Splitted path in to part so that it will not get exposed. Still, I need to add more restrictions.)</i></td>
-            <td class="nov">14</td>
+            <td class="tdd" data-month="11">14</td>
         </tr>
         <tr>
           <td>22</td>
           <td>There are additional texts that are merged with update commands such as "Update Adgroup14", "Update Highlight1", etc. Could you give some space in between Update and text so they are different and also change look so "text" will not look like a button..</td>
           <td class="f">FIXED<br><i>(It will only show action text such as "Update", "Add" and "Delete")</i></td>
-          <td class="nov">11</td>
+          <td class="tdd" data-month="11">11</td>
       </tr>
       <tr>
         <td>23</td>
         <td>Should we increase the size of popup so all forms and list2 records fit without scrolling left/right?</td>
         <td class="f">FIXED</td>
-        <td class="nov">09</td>
+        <td class="tdd" data-month="11">09</td>
     </tr>
     <tr>
       <td>24</td>
       <td>Disable Delete Button if there is only one article/ad left</td>
       <td class="f">FIXED</td>
-      <td class="nov">10</td>
+      <td class="tdd" data-month="11">10</td>
      </tr>
      <tr>
       <td>25</td>
@@ -297,6 +336,8 @@ h3 {
      </tr>
     </table>
 </div>
+<span class="date" style="display:none"></span><br>
+<span class="month" style="display:none"></span>
 </body>
 </html>
 
