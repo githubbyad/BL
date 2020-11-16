@@ -35,8 +35,13 @@ $('.tdd').each(function(){
     }
   }
 });
+$('td:nth-child(3)').each(function(){
+  if($(this).text() == '') {
+    $(this).parent('tr').addClass('od9');
+  }
+});
 $('.v').each(function(){
-$(this).parent('tr').addClass('odx');
+$(this).parent('tr').addClass('od10f');
 });
 });
 </script>
@@ -220,7 +225,10 @@ tr {
 .latest.o1 {
   order: 1;
 }
-.odx {
+.od9 {
+	order: 9;
+}
+.od10 {
 	order: 10;
 }
 red {
