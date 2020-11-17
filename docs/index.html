@@ -41,7 +41,13 @@ $('td:nth-child(3)').each(function(){
   }
 });
 $('.v').each(function(){
-$(this).parent('tr').addClass('od10f');
+$(this).parent('tr').addClass('od10');
+});
+$('.v3').each(function(){
+$(this).parent('tr').addClass('od9');
+});
+$('.s').each(function(){
+$(this).parent('tr').addClass('od8');
 });
 });
 </script>
@@ -228,6 +234,9 @@ tr {
 .od9 {
 	order: 9;
 }
+.od8 {
+	order: 8;
+}
 .od10 {
 	order: 10;
 }
@@ -267,7 +276,7 @@ red {
         <tr>
             <td>3</td>
             <td>We cannot see Article list having Highlight excluded. This is for Previews and ArticleGroup</td>
-            <td class="tdd" data-month="11">15</td>
+            <td class="tdd" data-month="11">13</td>
             <td class="v3">Not Required</td>
             <td>We can now modify individual Articles, so this request is not required.</td>
             
