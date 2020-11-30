@@ -1,0 +1,189 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal', 'Vertical', 'Default'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<div class="menu_bar">
+<div class="menu_div">
+{{RepeatBegin1}}
+<div class="menubodyhorizontal active has-sub custom_menu_{{MenuId}}">
+<a href="{{MenuLink}}" style="{{MenuStyle}}" class="menubodyhorizontal custom_menu_{{MenuId}}">{{Menu}}<i style="display:none;" class="fa fa-angle-down" aria-hidden="true"></i></a>
+<div class="submenu_div column7">
+{{RepeatBegin2}}
+<div class="submenubodyhorizontal  custom_Submenu_{{SubMenuId}}" style="{{CSSDisplay}}">
+<a href="{{SubMenuLink}}" style=" {{SubMenuMouseInOutColor}} {{SubMenuStyle}}" class="submenubodyhorizontal custom_Submenu_{{SubMenuId}} "><i class="fa fa-angle-right" aria-hidden="true"></i>{{SubMenu}}</a>
+</div>
+{{RepeatEnd2}}
+</div>
+</div>
+{{RepeatEnd1}}
+</div>
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+
+{{LayoutH1Begin}}
+{{LayoutH1Limit10}}
+{{SortBy:Issue, Updated}}
+function GetHighlights1(){document.write('<div id="H1" class="css_ticker">
+<div class="Breaking_News">
+<span class="bn-label"><span>Breaking News</span></span>
+<ul>
+{{RepeatBegin}}
+<li><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></li>
+{{RepeatEnd}}
+</ul>
+</div>
+</div>');}
+{{LayoutH1End}}
+
+
+{{LayoutH2Begin}}
+{{LayoutH2Limit100}}
+{{SortBy:Issue, Updated}}
+{{RemoveHTMLBody}}
+function GetHighlights2(){document.write('<div id="H2" style="display:none;">
+{{RepeatBegin}}
+{{If Counter < 2}}
+<div class="H2 uncommentbig">
+<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><div class="H2_month_year"><span>{{MonthI1}}</span><span>{{YearI}}</span></div><div class="H2_separate">|</div><div class="H2_day"><span>{{DayI}}</span></div></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+</div>
+{{ElseIf Counter < 5}}
+<div class="H2 uncomment1">
+<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+{{ElseIf Counter < 11}}
+<div class="H2 uncomment2">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 21}}
+<div class="H2 uncomment3">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 31}}
+<div class="H2 uncomment4">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 41}}
+<div class="H2 uncomment5">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 51}}
+<div class="H2 uncomment6">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 61}}
+<div class="H2 uncomment7">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 71}}
+<div class="H2 uncomment8">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{ElseIf Counter < 81}}
+<div class="H2 uncomment9">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{Else}}
+<div class="H2 uncomment10">
+<!--<div class="H2_img"><a class="art-link" href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H2_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2_submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H2_issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H2_body">{{Body}}</div>
+<div class="H2_more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>-->
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+<div class="load_more"><span>Load more <i class="fa fa-angle-down" aria-hidden="true"></i></span></div>
+</div>');DisplayHighlight('H2');}
+{{LayoutH2End}}
+
+
+{{LayoutH4Begin}}
+{{LayoutH4Limit8}}
+{{SortBy:Issue, Updated}}
+function GetHighlights4(){document.write('
+<div id="H4" style="display:none;">
+<div id="column-label"><span>TRENDING NOW</span></div>
+{{RepeatBegin}}
+<div class="H4_container">
+<div class="H4_counter">{{Counter}}</div>
+<div class="H4_heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+</div>
+{{RepeatEnd}}
+</div>');DisplayHighlight('H4');}
+{{LayoutH4End}}
+
+
+{{LayoutArticleGroup300Begin}}
+{{File:articlegroup300.js}}
+{{LayoutArticleGroup300Limit3}}
+{{SortBy:Issue, Updated}}
+{{Where:SubMenuIdInclude:171}}
+function GetArticleGroup300(){document.write('<div id="video-container" style="display:none;">
+<div class="video-label"><div id="column-label"><span>{{SubMenu}}</span></div></div>
+<div class="video-wrapper">
+{{RepeatBegin}}
+<div class="video-body">
+<a href="javascript:void(0);" onclick="OpenPopup4('{{Body}}','iframe');return false;"><span><i class="fa fa-play" aria-hidden="true"></i></span><img src="{{Body}}" /> 
+<div class="video-heading">{{Heading}}</div>
+<div class="video-share">
+<a class="video-fb" href="https://www.facebook.com/sharer/sharer.php?u={{HeadingLink}}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+<a class="video-tw" href="https://twitter.com/home?status={{HeadingLink}}" target="_blank"><i class="fab fa-twitter-square"></i></a>
+</div>
+</a>
+</div>
+{{RepeatEnd}}
+</div>
+</div>');DisplayHighlight('video-container');}
+{{LayoutArticleGroup300End}}
