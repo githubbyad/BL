@@ -1,0 +1,263 @@
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{ReplaceJavascriptChars:No}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+<div class="article-section-container">
+<div id="column-label" class="article-section-label">
+<span class="label-menu">{{Menu}}</span>
+<i class="fa fa-angle-right label-right" aria-hidden="true"></i>
+<span class="label-submenu">{{SubMenu}}</span>
+</div>
+<script>
+$(window).bind('load',function(){
+document.title = '{{Menu}} - {{SubMenu}}';
+window.location.hash = '{{Menu}}-{{SubMenu}}';
+});
+</script>
+<div id="article-section">
+{{RepeatBegin}}
+{{If Counter<=TotalArticlesPage}}
+<div class="article-section-block">
+<div class="article-section-image"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="article-section-flag">
+<div class="article-section-heading"><a href="{{HeadingLink}}"><h2 class="pageheading">{{Heading}}</h2></a></div>
+<div class="article-section-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="article-section-body pagebody">{{Body}}</div>
+<div class="article-section-more"><a href="{{HeadingLink}}"><span>{{more}}<i class="fa fa-arrow-right_SEC"></i></span></a></div>
+</div>
+</div>
+{{Else}}
+<div class="article-section-block uncommentx">
+<!--<div class="article-section-image"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="article-section-flag">
+<div class="article-section-heading"><a href="{{HeadingLink}}"><h2 class="pageheading">{{Heading}}</h2></a></div>
+<div class="article-section-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="article-section-body pagebody">{{Body}}</div>
+<div class="article-section-more"><a href="{{HeadingLink}}"><span>{{more}}<i class="fa fa-arrow-right_SEC"></i></span></a></div>
+</div>-->
+</div>
+{{EndIf}}
+{{If TotalArticlesArchive=0}}
+<style>.DisplayFlag{display:none;}</style>
+{{EndIf}}
+{{If Counter=TotalArticlesPage}}
+<div class="archive-load_more"><span>Load more <i class="fa fa-angle-down" aria-hidden="true"></i></span></div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+</div>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
+
+{{ArticleValuesBegin}}
+<div class="sharebody layout_sharebody pageheading top_share">{{ShareToolsTop}}</div>
+<div><h1 class="pageheading layout_pageheading">{{Heading}}</h1></div>
+<div class="pagebody layout_pagebody art-pagebody">
+<div class="art-img">{{<img class="pagephoto layout_pagephoto" src=":Picture1:">}}</div>
+<div class="pagephotocaption layout_pagephotocaption art-caption">{{Picture1Caption}}</div>
+<div class="art-line">
+<div class="pagebyline layout_pagebyline" style="padding-right:0px;">{{<i class="fa fa-user-o" aria-hidden="true"></i>:By}}</div>
+<div class="pageissuedate layout_pageissuedate"><i class="fa fa-calendar" aria-hidden="true"></i>{{IssueDate}}</div>
+</div>
+<div class="art-body">{{Body}}</div>
+<span class="pagesourceline layout_pagesourceline">{{<span style="color:#222222;"> - </span> :Source}}</span>
+<div class="sharebody layout_sharebody bottom_share">{{<br>:ShareToolsBottom}}</div>
+</div>
+<div class="opinionbody layout_opinionbody">{{AllowComments:<br>}}</div>
+{{ArticleValuesEnd}}
+
+
+{{LayoutNewsLetter1Begin}}
+{{LayoutNewsLetter1Limit10}}
+{{ReplaceJavascriptChars:No}}{{Where:MaxIssue}}{{SortBy:Menu, Issue Desc}}
+<html><head></head><body style="font: 13px Trebuchet MS"><br><table cellpadding="3" style="background:#ECECEC;border:2px solid #088484;padding:5px;border-radius:10px;"><tbody><tr><td align="center" colspan="2"><a href="{{Home}}"><img style="max-width:300px;" src="https://viestramagazine.com/clients/viestramagazine/11-13-2019-5-25-13-PM-3382775.png"></a><br><font size="3" face="Trebuchet MS"><strong>Welcome to {{Company}}!</strong></font></td></tr>
+{{RepeatBegin}}
+<tr><td style="background:#088484;height: 25px;border-radius: 3px;vertical-align: middle;" colspan="2" align="LEFT" style="{{SubMenuNoRepeatCSSDisplay}}"><font size="2" face="Trebuchet MS" ><a style="text-decoration:none;color:white;text-transform: uppercase;" href=" {{Http}}{{PutHName}}{{PutHExt}}{{SubMenuLink}}" target="_BLANK"><strong>{{SubMenuNoRepeat}}</strong></a></font></td></tr><tr>
+<td align="LEFT"><a href="{{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><img style="max-width:100px;" src="{{Http}}{{PutHName}}{{PutHExt}}{{HeadingImage}}" alt="" /></a></td><td align="LEFT"><font size="2" face="Trebuchet MS"><strong><a style="text-decoration:none;" href=" {{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}">{{Heading}}</a><strong></font></td></tr>
+{{RepeatEnd}}
+</tbody></table></body></html>
+{{LayoutNewsLetter1End}}
+
+
+{{FormValuesBegin}} 
+
+{{ReplaceFieldHelpWithFieldCaption:Yes}}
+{{RequiredValue:*}}
+{{SelectValue:Select}}
+{{FieldHelpValue:<b class="tooltip tooltip-top-right"><<FieldHelp>></b>}}
+{{SSLSecurityValue:<img alt="SSL Security" width=100 src="/images/ssl_security.jpg">}}
+{{TextAreaCount:<label id="<<FieldName>>-memo4"></label> <label id="<<FieldName>>-memo42"></label>}}
+<div class="formbody">
+<div class="body">
+<!--FormError-->
+<!--FormMessage-->
+<form class="custom-form" enctype="multipart/form-data" autocomplete="off" id="CustomForm" method="post" name="CustomForm" onsubmit="return Vailidate(this)" >
+<!--FKeys-->
+{{FormEmailSubject}} 
+{{FormEmailConfirmMessage}} 
+{{FormEmailFormat}} 
+{{FormEmailTo}} 
+{{FormEmailCC}}
+<header>
+{{FormTitle}}
+</header>
+<fieldset>
+<div class="system_text Header_text">
+{{FormHeader}}
+</div>
+
+{{RepeatBegin}} 
+
+{{If FieldType=System}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput formfieldinput_custom formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=ReadOnly}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput formfieldinput_custom formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Divider}}
+
+<section>
+<div class="label">
+<div class="inp_custom">
+<div class="formdivider formdivider_custom">
+{{FieldCaption}}
+</div>
+</div>
+</div>
+</section>
+
+{{ElseIf FieldType=Memo}}
+
+<section>
+<label class="input">
+<label class="textarea">
+<{{TextArea}} class="formfieldinput formfieldinput_custom" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}"></{{TextArea}}>
+{{FieldHelp}}
+</label>
+<div class="formfieldname" style="text-align: left;">
+<label class="textarea">{{TextAreaCount}}</label>
+</div>
+</label>
+</section>
+
+{{ElseIf FieldType=File}}
+
+<section>
+<label for="file" class="inp1 input input-file">
+<div class="button"><input type="file"  name="{{FieldName}}" onchange="this.parentNode.nextSibling.value = this.value.replace(/.*[\/\\]/, '');">Browse</div><input id="{{FieldName}}" name="{{FieldName}}" type="text" placeholder="Upload file" READONLY="" ID="{{FieldName}}-Browse" VALUE="">
+</label>
+{{FieldHelp}}
+</section>
+
+{{ElseIf FieldType=Password}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="password"  class="formfieldinput formfieldinput_custom"  placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Date}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldCaption}}{{FieldRequired}}" id="{{FieldName}}" onkeypress="return false;" readonly style="cursor: default;" type="text" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=DropDown}}
+
+<section>
+<label class="label">
+<label class="select">
+<select id="{{FieldName}}" name="{{FieldName}}">
+{{FieldDropDown}}
+</select> <i></i>
+</label>
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Hidden}} 
+
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="hidden" value="{{FieldDefaultValue}}"> 
+
+{{ElseIf FieldType=Decimal}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="text"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Number}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="Number"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=CheckBox}} 
+
+<section>
+<label class="checkbox state-error"><input id="{{FieldName}}" name="{{FieldName}}"  type="checkbox" name="checkbox"><i></i>{{FieldRequired}}{{FieldCaption}}</label>
+</section>
+
+{{ElseIf FieldType=Captcha}}
+
+<section>
+<label class="input">
+{{FieldCaptcha}}
+</label>
+</section>
+
+{{Else}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" maxlength="{{FieldLength}}" type="text" class="formfieldinput formfieldinput_custom" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{EndIf}} 
+
+{{RepeatEnd}}
+
+<div class="system_text footer_text">
+{{FormFooter}}
+</div>
+</fieldset>
+<footer>
+<button class="button" type="submit">{{FormButtonSubmit}}</button>
+</footer>
+</form>
+</div>
+<script language="JavaScript" type="text/javascript">LoadDoc("/get_sc.asp", "hcdiv", "");</script> 
+<script language="javascript">GetTooltipSys1();</script> 
+<script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+
+{{SSLSecurityValue}}
+
+</div>
+
+{{FormValuesEnd}}
