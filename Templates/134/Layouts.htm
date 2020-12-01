@@ -1,0 +1,368 @@
+{{LayoutArticleGroup106Begin}}
+{{LayoutArticleGroup106Limit10}}
+{{RemoveHTMLBody}}
+{{SortBy:Issue,Updated}}
+{{Where:SubMenuIdInclude:191}}
+function GetArticleGroup106(){document.write({{PutHtmlChar39}}
+<div class="ARG106-wrapper">
+<div class="ARG106-mid-ARG106-wrapperBox">
+<div class="ARG106-mid-ARG106-wrapperHeader">
+<h3>Our Trending Events</h3>
+</div>
+<div class="ARG106-mid-ARG106-wrapperBody">
+{{RepeatBegin}}
+<ul class="ARG106-mid-ARG106-wrapper">
+<li>
+<div class="ARG106-mid-ARG106-wrapperDot"></div>
+<div class="ARG106-mid-ARG106-wrapperWork"><a href="{{HeadingLink}}"  class="layout_text_ARG105">{{Heading}}</a></div>
+<div class="ARG106-mid-ARG106-wrapperDate">
+<i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}
+</span></div>
+</li>
+</ul>
+{{RepeatEnd}}
+</div>
+</div>
+</div>
+{{PutHtmlChar39}});DisplayHighlight({{PutHtmlChar39}}FrontpageNews{{PutHtmlChar39}});} 
+{{LayoutArticleGroup106End}}
+
+{{LayoutH7Begin}}
+{{LayoutH7Limit10}}
+{{SortBy:Issue, Updated}}
+function GetHighlights7(){document.write('<div id="H7" class="css_ticker">
+<div class="Breaking_News">
+<span class="bn-label">HEADLINES</span></span>
+<ul>
+{{RepeatBegin}}
+<li class="custom_background_{{MenuId}}"><a class="art-link " href="{{HeadingLink}}">{{Heading}}</a></li>
+{{RepeatEnd}}
+</ul>
+</div>
+</div>');}
+{{LayoutH7End}}
+
+{{LayoutH1Begin}}
+{{LayoutH1Limit6}}
+{{RemoveMore:Yes}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights1(){document.write('<div id="Highlight1" style="display:none";>
+<div class="main_H1">
+{{RepeatBegin}}
+
+{{If Counter=1}}
+<div class="main_H1_holder">
+<span class="Menu_H1 custom_background_{{MenuId}}">
+<span class="Menu-H1">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H1"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="image-wrapper_H1">
+<a href="{{HeadingLink}}"><img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H1" style="display: block;"></a>
+<div class="ribbon-wrapper-1">
+<div class="glow-1"> </div>
+<div class="ribbon-front-1 custom_background_{{MenuId}}">
+<div class="heading_H1"><a href="{{HeadingLink}}"  class="article_heading_H1">{{Heading}}</a></div>
+</div>
+<div class="ribbon-edge-topleft-1 custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-topright-1 custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomleft-1 custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomright-1 custom_border_rebbon_topleft_{{MenuId}}"></div>
+</div>
+</div>
+</div>
+{{ElseIf Counter<4}}
+<div class="main_H1_holder-b">
+<span class="Menu_H1 custom_background_{{MenuId}}">
+<span class="Menu-H1">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H1"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="image-wrapper_H1-b">
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H1-b" style="display: block;"></a>
+<div class="ribbon-wrapper">
+<div class="glow"> </div>
+<div class="ribbon-front custom_background_{{MenuId}}">
+<div class="heading_H1-b"><a href="{{HeadingLink}}"  class="article_heading_H1-b">{{Heading}}</a></div>
+</div>
+<div class="ribbon-edge-topleft custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-topright custom_border_rebbon_topright_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomleft custom_border_rebbon_bottomleft_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomright custom_border_rebbon_bottomright_{{MenuId}}"></div>
+</div>
+
+</div>
+</div>
+{{ElseIf Counter<6}}
+<div class="main_H1_holder-c">
+<span class="Menu_H1 custom_background_{{MenuId}}">
+<span class="Menu-H1">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H1"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="image-wrapper_H1-c">
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H1-c" style="display: block;"></a>
+
+<div class="ribbon-wrapper">
+<div class="glow"> </div>
+<div class="ribbon-front custom_background_{{MenuId}}">
+<div class="heading_H1-c"><a href="{{HeadingLink}}"  class="article_heading_H1-b">{{Heading}}</a></div>
+</div>
+<div class="ribbon-edge-topleft custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-topright custom_border_rebbon_topright_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomleft custom_border_rebbon_bottomleft_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomright custom_border_rebbon_bottomright_{{MenuId}}"></div>
+</div>
+</div>
+</div>
+{{Else}}
+<div class="main_H1_holder-c">
+<span class="Menu_H1 custom_background_{{MenuId}}">
+<span class="Menu-H1">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H1"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="image-wrapper_H1-c">
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H1-c" style="display: block;"></a>
+<div class="ribbon-wrapper">
+<div class="glow"> </div>
+<div class="ribbon-front custom_background_{{MenuId}}">
+<div class="heading_H1-c"><a href="{{HeadingLink}}"  class="article_heading_H1-b">{{Heading}}</a></div>
+</div>
+<div class="ribbon-edge-topleft custom_border_rebbon_topleft_{{MenuId}}"></div>
+<div class="ribbon-edge-topright custom_border_rebbon_topright_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomleft custom_border_rebbon_bottomleft_{{MenuId}}"></div>
+<div class="ribbon-edge-bottomright custom_border_rebbon_bottomright_{{MenuId}}"></div>
+</div>
+
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+
+</div>
+</div>');
+DisplayHighlight('Highlight1');}
+{{LayoutH1End}}
+
+{{LayoutH2Begin}}
+{{LayoutH2Limit10}}
+{{SortBy:Issue,Updated}}
+{{RemoveMore:Yes}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights2(){document.write('<div id="Highlight2" style="display:none";>
+<div class="main_H2">
+<div id="content">
+<aside class="arrow">Trending News...</aside>
+</div>
+{{RepeatBegin}}
+{{If Counter<3}}
+<div class="main_H2_holder {{Counter}}">
+<span class="Menu_H2 custom_background_{{MenuId}}">
+<span class="Menu-H2">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H2"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="heading_H2 custom_color_{{MenuId}}"><a href="{{HeadingLink}}"  class="article_heading_H2">{{Heading}}</a></div>
+<div class="Date_H2 custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+<div class="image-wrapper_H2">
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H2" style="display: block;"></a>
+</div>
+<div class="body_H2">{{Body}}</div>
+<div class="More_H2"><a href="{{HeadingLink}}"  class="custom_color_{{MenuId}}"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+<div class="More_H2-sharingtool-1">
+
+<ul class="social-share">
+<li>
+<a href="javascript:void(0);">
+<i class="fa fa-share-alt" aria-hidden="true"></i>
+</a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.facebook.com/sharer/sharer.php?u={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://twitter.com/intent/tweet?text={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li>
+
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.linkedin.com/shareArticle?mini=true&url={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}&title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+
+</div>
+{{ElseIf Counter<6}}
+<div class="main_H2_holder-b">
+<div class="image-wrapper_H2-b">
+<span class="Menu_H2-b custom_background_{{MenuId}}">
+<span class="Menu-H2-b">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H2-b"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H2-b" style="display: block;"></a>
+</div>
+<div class="heading_H2-b custom_color_{{MenuId}}"><a href="{{HeadingLink}}"  class="article_heading_H2-b">{{Heading}}</a></div>
+<div class="Date_H2-b custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+
+<div class="body_H2-b">{{Body}}</div>
+<div class="More_H2-b"><a href="{{HeadingLink}}"  class="custom_color_{{MenuId}}"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+<div class="More_H2-sharingtool-2">
+
+<ul class="social-share">
+<li>
+<a href="javascript:void(0);">
+<i class="fa fa-share-alt" aria-hidden="true"></i>
+</a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.facebook.com/sharer/sharer.php?u={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://twitter.com/intent/tweet?text={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li>
+
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.linkedin.com/shareArticle?mini=true&url={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}&title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+
+</div>
+{{Else}}
+<div class="main_H2_holder-b">
+<span class="Menu_H2-c custom_background_{{MenuId}}">
+<span class="Menu-H2-b">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H2-b"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="Date_H2-c custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+<div class="heading_H2-c custom_color_{{MenuId}}"><a href="{{HeadingLink}}"  class="article_heading_H2-b">{{Heading}}</a></div>
+<div class="More_H2-sharingtool">
+<ul class="social-share">
+<li>
+<a href="javascript:void(0);">
+<i class="fa fa-share-alt" aria-hidden="true"></i>
+</a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.facebook.com/sharer/sharer.php?u={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://twitter.com/intent/tweet?text={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li>
+
+<a class="sharing-tool-1" target="_blank" href="/share_file.asp?https://www.linkedin.com/shareArticle?mini=true&url={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}&title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+
+</div>
+</div>');
+DisplayHighlight('Highlight2');}
+{{LayoutH2End}}
+
+{{LayoutH4Begin}}
+{{LayoutH4Limit6}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights4(){document.write('<div id="Highlight4" style="">
+<div class="main_H4">
+<div id="content">
+<aside class="arrow">Top News...</aside>
+</div>
+{{RepeatBegin}}
+<div class="main_H4_holder custom_border_{{MenuId}}">
+<span class="Menu_H4 custom_background_{{MenuId}}">
+<span class="Menu-H4">{{Menu}}</span>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<span class="sub-Menu_H4"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+</span>
+<div class="heading_H4 custom_color_{{MenuId}}"><a href="{{HeadingLink}}"  class="article_heading_H4">{{Heading}}</a></div>
+<div class="Date_H2 custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+
+</div>
+
+{{RepeatEnd}}
+
+</div>
+</div>');
+DisplayHighlight('Highlight4');}
+{{LayoutH4End}}
+
+{{LayoutArticleGroup203Begin}}
+{{LayoutArticleGroup203Limit15}}
+{{Where:SubMenuIdInclude:188}}
+function GetArticleGroup203(){document.write('<div id="ArticleGroup203";>
+<div class="Video-wrapper">
+<div class="Video-prev-btn"><span class="fa fa-angle-up"></span></div>
+<div class="Video-next-btn"><span class="fa fa-angle-down"></span></div>
+<div class="Video-Video-nav-dots">
+<div class="Video-nav-dot" data-slide="1">
+</div>
+<div class="Video-nav-dot" data-slide="2">
+</div>
+<div class="Video-nav-dot" data-slide="3">
+</div>
+<div class="Video-nav-dot" data-slide="4">
+</div>
+<div class="Video-nav-dot" data-slide="5">
+</div>
+</div>
+
+{{RepeatBegin}}
+<div class="Video-panel" data-slide="{{Counter}}">
+<div class="Video-trans-layer" id="layer-{{Counter}}"></div>
+<section class="Video-section" id="Video-section-{{Counter}}">
+<div class="Video-section-content">
+<a class="photo-pop" name="{{HeadingImage}}" href="#" onclick="OpenPopup3('{{HeadingImage}}','image');return false;"><span><i class="fa fa-picture-o" aria-hidden="true"></i></span><img src="{{HeadingImage}}"></a>
+<a class="video-pop" href="#" onclick="OpenPopup2('https://www.youtube.com/watch?v={{Body}}','iframe', '850','500');return false;"><span><i class="fa fa-youtube-play"></i></span><img src="https://img.youtube.com/vi/{{Body}}/mqdefault.jpg"></a>
+</div>
+</section>
+
+</div>
+{{RepeatEnd}}
+</div>
+</div>
+');DisplayHighlight('ArticleGroup203');}
+{{LayoutArticleGroup203End}}
+
+
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<div id="cssmenu">
+<ul>
+   <div id="mweather-cont">
+       
+   </div>
+{{RepeatBegin1}}
+{{PutHtmlChar60}}li class="menubodyhorizontal active has-sub custom_menu_{{MenuId}}"{{PutHtmlChar62}}<a href="{{MenuLink}}" style="{{MenuStyle}}" class="menubodyhorizontal custom_menu_{{MenuId}}">{{Menu}}</a>
+<ul>
+{{RepeatBegin2}}
+{{PutHtmlChar60}}li class="submenubodyhorizontal  custom_Submenu_{{SubMenuId}} custom_menu_{{MenuId}}" 
+style="{{CSSDisplay}}" {{PutHtmlChar62}}<a href={{SubMenuLink}} style=" {{SubMenuMouseInOutColor}} {{SubMenuStyle}}" class="submenubodyhorizontal custom_Submenu_{{SubMenuId}} ">{{SubMenu}}</a>
+{{PutHtmlChar60}}/li{{PutHtmlChar62}}
+{{RepeatEnd2}}
+</ul>
+{{PutHtmlChar60}}/li{{PutHtmlChar62}}
+{{RepeatEnd1}}
+</ul>
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
