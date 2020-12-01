@@ -1,0 +1,295 @@
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{SortBy:Issue,Updated}} 
+{{RemoveMore:Yes}}
+{{RemoveHTMLBody}}
+{{ReplaceJavascriptChars:No}}
+<div class="main_SEC101">
+<div class="label-menu-wrap custom_background_<!--MenuId-->">
+<span>
+<div class="label-menu ">{{Menu}}</div>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<div class="label-submenu">{{SubMenu}}</div>
+</span>
+</div>
+{{RepeatBegin}}
+{{If Counter<=TotalArticlesPage}}
+
+<div class="main_SEC101_holder">
+<div class="image-wrapper_SEC101">
+<a href="{{HeadingLink}}">
+<img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_SEC101" style="display: block;"></a>
+</div>
+<div class="heading_SEC101"><a href="{{HeadingLink}}"  class="article_heading_SEC101 custom_color_{{MenuId}} ">{{Heading}}</a></div>
+<div class="Date_SEC101 custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+<span class="Menu_SEC101 custom_background_{{MenuId}}"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+<div class="body_SEC101">{{Body}}</div>
+<div class="More_SEC101 custom_border_{{MenuId}}"><a href="{{HeadingLink}}"  class="custom_color_{{MenuId}}"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></a></div>
+<div class="sharing-tool-index">
+<ul class="social-share">
+<li>
+<a href="javascript:void(0);">
+<i class="fa fa-share-alt" aria-hidden="true"></i>
+</a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="https://twitter.com/intent/tweet?text={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li>
+
+<a class="sharing-tool-1" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}&title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+{{Else}}
+<div class="main_SEC101_holder">
+<div class="Date_SEC101-b custom_color_{{MenuId}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div>
+<div class="heading_SEC101-b"><a href="{{HeadingLink}}"  class="heading_SEC101-b custom_color_{{MenuId}}">{{Heading}}</a></div>
+<div class="sharing-tool-index-archive">
+<ul class="social-share">
+<li>
+<a href="javascript:void(0);">
+<i class="fa fa-share-alt" aria-hidden="true"></i>
+</a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+</li>
+<li>
+<a class="sharing-tool-1" target="_blank" href="https://twitter.com/intent/tweet?text={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li>
+
+<a class="sharing-tool-1" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{Http}}{{PutHName}}{{PutHExt}}{{HeadingLink}}&title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
+
+{{ArticleValuesBegin}}
+<div><h1 class="pageheading layout_pageheading custom_color_<!--MenuId-->">{{Heading}}</h1></div>
+<div class="pagebody layout_pagebody">
+<table align="{{PictureAlignment}}" border=0 cellspacing=0 cellpadding=0 width=1>
+<tr><td align="{{PictureAlignment}}">
+<span>{{<img class="pagephoto layout_pagephoto" src=":Picture1:">}}</span></td>
+</tr>
+<tr>
+<td>
+<div class="pagephotocaption layout_pagephotocaption ">{{Picture1Caption}}</div>
+</td>
+</tr>
+</table>
+<table border=0 cellPadding=0 cellSpacing=0>
+<tr><td><div class="pagebyline layout_pagebyline" style="padding-right:0px;">{{By:<span style="color:#222222;padding-left:3px; padding-right:3px;">•</span>}}</div><div class="pageissuedate layout_pageissuedate custom_color_<!--MenuId-->"><i class="fa fa-clock-o" aria-hidden="true"></i>{{IssueDate}}</div></td></tr>
+</table>
+<div>{{Body}}</div>
+<span class="pagesourceline layout_pagesourceline">{{<span style="color:#222222;"> — </span> :Source}}</span>
+<div class="sharebody layout_sharebody bottom_share" align="left">
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_pinterest"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_whatsapp"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+</div></div>
+<div class="opinionbody layout_opinionbody" align="left">
+{{AllowComments:<br>}}
+</div>
+<div class="pageruler layout_pageruler"><span style="FONT-SIZE: 0pt;"> </span></div>
+<style>.pagedropcap {float:none;} </style>
+{{ArticleValuesEnd}}
+
+
+{{FormValuesBegin}} 
+{{ReplaceFieldHelpWithFieldCaption:Yes}}
+{{RequiredValue:*}}
+{{SelectValue:Select}}
+{{FieldHelpValue:<b class="tooltip tooltip-top-right"><<FieldHelp>></b>}}
+{{SSLSecurityValue:<img alt="SSL Security" width=100 src="/images/ssl_security.jpg">}}
+{{TextAreaCount:<label id="<<FieldName>>-memo4"></label> <label id="<<FieldName>>-memo42"></label>}}
+{{FixedValue1:onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, ' formfieldinput_custom formfieldinput')"}}
+{{FixedValue2:onfocus=onchange="this.parentNode.nextSibling.value = this.value.replace(/.*[\/\\]/, '');"}}
+
+<!--FormError-->
+<!--FormMessage-->
+<form class="custom-form" enctype="multipart/form-data" autocomplete="off" id="CustomForm" method="post" name="CustomForm" onsubmit="return Vailidate(this)" >
+<!--FKeys-->
+{{FormEmailSubject}} 
+{{FormEmailConfirmMessage}} 
+{{FormEmailFormat}} 
+{{FormEmailTo}} 
+{{FormEmailCC}}
+<header>
+{{FormTitle}}
+</header>
+<fieldset>
+<div class="system_text Header_text">
+{{FormHeader}}
+</div>
+
+{{RepeatBegin}} 
+
+{{If FieldType=System}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput_custom formfieldinput formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=ReadOnly}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput_custom formfieldinput formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Divider}}
+
+<section>
+<div class="label">
+<div class="inp_custom">
+<div class="formdivider formdivider_custom">
+{{FieldCaption}}
+</div>
+</div>
+</div>
+</section>
+
+{{ElseIf FieldType=Memo}}
+
+<section>
+<label class="input">
+<label class="textarea">
+<{{TextArea}} class="formfieldinput formfieldinput_custom" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}"></{{TextArea}}>
+{{FieldHelp}}
+</label>
+<div class="formfieldname" style="text-align: left;">
+<label class="textarea">{{TextAreaCount}}</label>
+</div>
+</label>
+</section>
+
+{{ElseIf FieldType=File}}
+
+<section>
+<label for="file" class="inp1 input input-file">
+<div class="button formbutton"><input type="file"  name="{{FieldName}}" class="formfieldinput_custom formfieldinput" {{FixedValue2}}>Browse</div><input id="{{FieldName}}" name="{{FieldName}}" type="text" {{FixedValue1}} placeholder="Upload file" class="formfieldinput formfieldinput_custom" READONLY="" ID="{{FieldName}}-Browse" VALUE="">
+</label>
+{{FieldHelp}}
+</section>
+
+{{ElseIf FieldType=Password}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="password"  class="formfieldinput_custom formfieldinput" {{FixedValue1}} placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Date}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldCaption}}{{FieldRequired}}" id="{{FieldName}}" {{FixedValue1}} onkeypress="return false;" class="formfieldinput formfieldinput_custom" readonly style="cursor: default;" type="text" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=DropDown}}
+
+<section>
+<label class="label">
+<label class="select">
+<select id="{{FieldName}}" name="{{FieldName}}" class="formfieldinput_custom formfieldinput">
+{{FieldDropDown}}
+</select> <i></i>
+</label>
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Hidden}} 
+
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="hidden" value="{{FieldDefaultValue}}"> 
+
+{{ElseIf FieldType=Decimal}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="text"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class=" formfieldinput_custom formfieldinput" {{FixedValue1}} maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Number}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="Number"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput_custom formfieldinput" {{FixedValue1}} maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=CheckBox}} 
+
+<section>
+<label class="checkbox state-error"><input id="{{FieldName}}" name="{{FieldName}}"  type="checkbox" name="checkbox"><i></i>{{FieldRequired}}{{FieldCaption}}</label>
+</section>
+
+{{ElseIf FieldType=Captcha}}
+
+<section>
+<label class="input">
+{{FieldCaptcha}}
+</label>
+</section>
+
+{{Else}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" maxlength="{{FieldLength}}" {{FixedValue1}} placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" class="formfieldinput_custom formfieldinput" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{EndIf}} 
+
+{{RepeatEnd}}
+
+<div class="system_text footer_text">
+{{FormFooter}}
+</div>
+</fieldset>
+<footer>
+<button class="button formbutton" type="submit">{{FormButtonSubmit}}</button>
+</footer>
+<script language="JavaScript" type="text/javascript">LoadDoc("/get_sc.asp", "hcdiv", "");</script> 
+<script language="javascript">GetTooltipSys1();</script> 
+<script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+</form>
+<br>
+<center>{{SSLSecurityValue}}</center>
+<br>
+{{FormValuesEnd}}
