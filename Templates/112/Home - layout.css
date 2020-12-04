@@ -1,0 +1,349 @@
+.main_wrapper {
+    background-color: #fff;
+    float: left;
+    margin-right: auto;
+    width: 100%;
+     position: relative;
+}
+
+.wrapper_holder {
+    background-color: #242424;
+    float:left;
+    width: 100%;
+     position: relative;
+}
+.c1 {
+    background-color: #242424;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+     position: relative;
+}
+.c2 {
+    background-color: #242424;
+    border-bottom: 1px solid #4d4d4d;
+    float: left;
+    height: 50px;
+    overflow: hidden;
+    padding-bottom: 6px;
+    position: relative;
+    width: 100%;
+}
+.c3 {
+    float: left;
+    width: 1200px;
+    position: relative;
+}
+.c4 {
+    background-color: ;
+    float: left;
+    width: 59%;
+    position: relative;
+}
+
+.c5 {
+    float: right;
+    margin-left: 20px;
+    margin-top: 45px;
+    position: relative;
+    width: 39%;
+}
+
+
+#top_links {
+    float: left;
+    width: 34%;
+    position: relative;
+}
+
+.link1 {
+    float: left;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 25px;
+     position: relative;
+}
+
+.toplinks {
+    color: #cccccc !important;
+    font-family: roboto condensed !important;
+    font-size: 14px !important;
+     position: relative;
+}
+
+
+
+#social {
+    border-left: 1px solid #4d4d4d;
+    float: left;
+    height: 50px;
+    margin-left:20px;
+    margin-top: 15px;
+    position: relative;
+}
+
+
+#social_icon {
+    float: left;
+    margin-left: 22px;
+    position: relative;
+}
+
+#social_icon .fa {
+    color: #dedede;
+    margin-top: 10px;
+     position: relative;
+}
+
+
+
+
+.c6 {
+    background-color: #242424;
+    border-top: 1px solid #4d4d4d;
+    float: left;
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+.c7 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+     position: relative;
+}
+
+.c8 {
+    background-color: ;
+    float: left;
+    height: ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+     position: relative;
+}
+
+
+.c9 {
+    height: ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+     position: relative;
+}
+.c10 {
+    float: left;
+    height: ;
+    width: 50%;
+     position: relative;
+}
+.c11 {
+    float: left;
+    height: ;
+    width: 50%;
+    position: relative;
+}
+
+
+.c12 {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+     position: relative;
+}
+.c13 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+     position: relative;
+}
+.c14 {
+    float: left;
+    width: 1200px;
+     position: relative;
+}
+.c15 {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+    background-color: ;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.left {
+    float: left;
+    width: 75%;
+}
+.right {
+    float: right;
+    width: 25%;
+}
+.c16 {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 1200px; 
+    height: auto;
+    position: relative;
+}
+
+.c17 {
+  
+    float: left;
+    width: 98%;
+    position: relative;
+}
+.highlight {
+    float: left;
+}
+.cc18 {
+    float: right;
+    margin-left: 20px;
+    margin-top: 4px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.c19 {
+    float: left;
+    height: auto;
+    position: relative;
+    width: 98%;
+    margin-top: 20px;
+}
+
+
+.c20 {
+    background-color: #242424;
+    float: left;
+    height: 250px;
+    position: relative;
+    width: 100%;
+}
+.c21 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1200px;
+}
+
+
+.logo_wrapper {
+    border-right:1px solid #393939;
+    float: left;
+    height:200px;
+    margin-top: 30px;
+    width: 26%;
+}
+
+
+.c22 {
+    float: left;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+.cc22 {
+    color: #dedede;
+    float: left;
+    font-size: 17px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cc23 {
+
+    color: #dedede;
+    float: left;
+    font-size: 17px;
+}
+
+.c23 {
+    border-right: 1px solid #393939;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-right: 10px;
+    width: 45%;
+}
+
+.c24 {
+    float: left;
+    width: 26%;
+}
+
+#social_bottom {
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.social_icon_bottom {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.social_icon_bottom .fa {
+    color: #dedede;
+    font-size: 25px;
+}
+#social_icon_heading {
+    color: #dedede !important;
+    font-size: 33px;
+    margin-bottom: 20px;
+    width: auto;
+}
+.social_icon_bottom.facebook {
+    padding-left: 0 !important;
+}
+.hitcounter_bottom {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+.site_map_bottom {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    text-align: center;
+}
+.sitemap {
+    color: #dedede;
+    font-size: 18px;
+    text-align: center;
+}
+
+.hitcounter {
+    color: #dedede;
+    font-size: 18px;
+    line-height: 40px;
+}
+.c25 {
+    background-color: #000;
+    float: left;
+    height: 50px;
+    width: 100%;
+}
+.c26 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+.power {
+    color: #dedede;
+    font-size: 12px;
+    line-height: 50px;
+}
+
+.contactbody {
+    color: #dedede;
+    font-size: 17px;
+}
+
