@@ -1,0 +1,144 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<div id="cssmenu">
+<ul>
+   <div id="mweather-cont">
+       
+   </div>
+{{RepeatBegin1}}
+{{PutHtmlChar60}}li class="menubodyhorizontal active has-sub custom_menu_{{MenuId}}"{{PutHtmlChar62}}<a href="{{MenuLink}}" style="{{MenuStyle}}" class="menubodyhorizontal custom_menu_{{MenuId}}">{{Menu}}</a>
+<ul>
+{{RepeatBegin2}}
+{{PutHtmlChar60}}li class="submenubodyhorizontal  custom_Submenu_{{SubMenuId}} custom_menu_{{MenuId}}" 
+style="{{CSSDisplay}}" {{PutHtmlChar62}}<a href={{SubMenuLink}} style=" {{SubMenuMouseInOutColor}} {{SubMenuStyle}}" class="submenubodyhorizontal custom_Submenu_{{SubMenuId}} ">{{SubMenu}}</a>
+{{PutHtmlChar60}}/li{{PutHtmlChar62}}
+{{RepeatEnd2}}
+</ul>
+{{PutHtmlChar60}}/li{{PutHtmlChar62}}
+{{RepeatEnd1}}
+</ul>
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+{{LayoutH8Begin}}
+{{LayoutH8Limit15}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+function GetHighlights8(){document.write('<div id="Highlight8" style="display:none";>
+<div id="highlight8_container" class="slider_container_H8b">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+<div style="position: absolute; display: block; background: url(/JQuery/Highlight8/loading.gif) no-repeat center #222222; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+</div>
+<div u="slides" class="slides_H8b">
+{{RepeatBegin}}
+<div>
+<div class="sing-slide_H8b">
+<div class="head-body-container_H8b custom_background_transparent_{{MenuId}}">
+<a href="{{HeadingLink}}"><span class="heading_H8b" style="display: block;">{{Heading}}</span></a>
+<div class="body_content_H8b">{{Body}}</div>
+</div>
+
+<div class="img_cont_H8b">
+<span class="Menu_H1 custom_background_{{MenuId}}"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+<a href="{{HeadingLink}}"><img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="article-img_H8b" style="display: block;"/></a></div>
+<img u="thumb" src="{{HeadingImage}}" />
+</div>
+</div>
+
+{{RepeatEnd}}
+</div>	
+<div u="navigator" class="jssorb21_h5">
+<div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+</div>
+</div>
+
+</div>');DisplayHighlight('Highlight8');}
+{{LayoutH8End}}
+
+
+{{LayoutH1Begin}}
+{{LayoutH1Limit4}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights1(){document.write('<div id="Highlight1" style="display:none";>
+<div id="main_H1">
+{{RepeatBegin}}
+<div id="main_H1_holder">
+<span class="Menu_H1 custom_background_{{MenuId}}"><a href="{{SubMenuLink}}">{{SubMenu}} </a></span>
+<a href="{{HeadingLink}}"><img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="image_H1" style="display: block;"></a>
+<div id="heading_H1"><a href="{{HeadingLink}}"  class="article_heading_H1">{{Heading}}</a></div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>');
+DisplayHighlight('Highlight1');}
+{{LayoutH1End}}
+
+{{LayoutH2Begin}}
+{{LayoutH2Limit6}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights2(){document.write('<div id="Highlight2" style="display:none";>
+<div u="slides" class="slides_Preview120">
+<div class="main_H2_menu_heading1"><span class="main_H2_menu_heading">Around the world</span></div>
+{{RepeatBegin}}
+<div class="main_H2 main_H2_space_{{Counter}}">
+<span class="sub-menu_H2 custom_background_{{MenuId}}"><a href="{{SubMenuLink}}">{{SubMenu}}</a></span>
+
+<div class="image_H2 custom_border_{{MenuId}}"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"></a></div>
+
+<div id="heading_H2"><a href="{{HeadingLink}}"  class="text1_H2 custom_color_{{MenuId}}">{{Heading}}</a></div>
+
+<div id="body_H2" class=" body_H2">{{Body}}</div>
+
+<div class="read_more_custom_H2 "><a href="{{HeadingLink}}" class=" read_more_custom_H2 custom_color_{{MenuId}}">MORE<span><i class="fa fa-arrow-circle-right"></i></span></a></div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>');
+DisplayHighlight('Highlight2');}
+{{LayoutH2End}} 
+
+{{LayoutH5Begin}}
+{{LayoutH5Limit10}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{BlankValue-TotalArticles}}
+function GetHighlights5(){document.write('<div id="Highlight5" style="display:none";>
+<div class="main_H5_menu_heading">Trending Articles</div>
+<div id="main_H5">
+{{RepeatBegin}}
+<div class="main_H5_holder">
+<span class="counter_H5 custom_border_{{MenuId}}"><span class="counter_border_H5">{{Counter}}</span></span>
+<div class="heading_H5 custom_color_{{MenuId}}"><a href="{{HeadingLink}}"  class="article_heading_H5">{{Heading}}</a></div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>');
+DisplayHighlight('Highlight5');}
+{{LayoutH5End}}
+
+{{LayoutArticleGroup1Begin}}
+{{LayoutArticleGroup1Limit1}}
+{{RemoveHTMLBody}}
+{{SortBy:Issue,Updated}}
+{{Where:SubMenuIdInclude:147}}
+function GetArticleGroup1(){document.write({{PutHtmlChar39}}
+<div class="container_ARG1">
+{{RepeatBegin}}
+<div id="container_ARG1">
+<div id="heading_ARG1"><a href="{{HeadingLink}}"  class="layout_text_ARG1">{{Heading}}</a></div>
+<div class="body_ARG1 body_text_ARG1">{{Body}}</div>
+<div class="more_ARG1"><a href="{{HeadingLink}}">MORE <i class="fa fa-arrow-circle-right"></i> </a></div>
+</div>
+{{RepeatEnd}}
+<div style="clear:both;"> </div>
+</div>
+{{PutHtmlChar39}});DisplayHighlight({{PutHtmlChar39}}FrontpageNews{{PutHtmlChar39}});} 
+{{LayoutArticleGroup1End}}
