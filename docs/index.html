@@ -85,6 +85,22 @@ pre {
 h1 {
   font-weight: bold;
   color: #4747d2;
+    background-image: linear-gradient(90deg, violet 10%, indigo 20%, blue 30%, green 50%, yellow 60%, orange 70%, red 80%, #fff 100%), linear-gradient(90deg, violet 10%, indigo 20%, blue 30%, green 50%, yellow 60%, orange 70%, red 80%, #fff 100%), linear-gradient(0deg, violet 10%, indigo 20%, blue 30%, green 50%, yellow 60%, orange 70%, red 80%, #fff 100%), linear-gradient(0deg, violet 10%, indigo 20%, blue 30%, green 50%, yellow 60%, orange 70%, red 80%, #fff 100%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: left top, right bottom, left bottom, right top;
+  animation: hpe-border 500ms infinite linear;
+  border-radius: 5px;
+  padding:10px;
+  text-align: center;
+}
+@keyframes hpe-border {
+  0% {
+    background-position: left top, right bottom, left bottom, right   top;
+  }
+  100% {
+    background-position: left 15px top, right 15px bottom , left bottom 15px , right   top 15px;
+  }
 }
 table {
 	border-collapse: collapse;
