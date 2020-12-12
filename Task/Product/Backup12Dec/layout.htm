@@ -1,0 +1,461 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<div class="mobile-container"  style="display:none;">
+<div class="mobile-wrap">
+<span class="menu-mobile-label">Menu</span>
+<span class="icon-menu-bars">
+<span class="bar-1"></span>
+<span class="bar-2"></span>
+<span class="bar-3"></span>
+</span>
+</div>
+<div class="mobile-search"><a href="JavaScript:Void(0);" class="search-link"><i class="fa fa-search" aria-hidden="true"></i>SEARCH</a></div>
+</div>
+<div class="column6">
+<div class="menu_logo"><script type="text/javascript" language="JavaScript">GetLogo();<\/script></div>
+{{RepeatBegin1}}
+<div class="menubodyhorizontal active has-sub custom_menu_{{MenuId}} ">
+<a href="{{MenuLink}}" style="{{MenuStyle}}">{{Menu}} <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+<div class="SubMenuContainer1">
+{{RepeatBegin2}}
+<div class="submenubodyhorizontal custom_Submenu_{{SubMenuId}} " style="{{CSSDisplay}}">
+<a name="S_{{SubMenuId}}_S" href="{{SubMenuLink}}" style="{{SubMenuMouseInOutColor}} {{SubMenuStyle}}" >{{SubMenu}}</a>
+</div>
+{{RepeatEnd2}}
+</div>
+</div>
+{{RepeatEnd1}}
+<div class="menux-cart">
+<div class="product1-salestax" style="display:none;">{{SalesTaxState}}</div>
+<div class="product-cartx">
+<div title="Click to open Cart" class="product1-cart-count"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="pc-count"></span></a></div>
+<div class="product-cart-items" style="display:none;">
+<ol id="list-item"></ol>
+<div class="total-text"><p>Total: </p><p id="total-price" class="productx-total-price">{{Currency}}<span>0.00</span></p></div>
+<div class="product-checkout-link"><a href="javascript:void(0);" onclick="OpenShopping(\'cartcheckout.htm\',\'iframe\');">Checkout</a></div>
+</div>
+<div class="product1-empty" style="display:none;">
+<span>Your cart is empty</span>
+<button class="product1-continue">Continue shopping</button>
+</div>
+</div>
+</div>
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+
+
+{{LayoutArticleGroup666Begin}}
+{{LayoutArticleGroup666Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartcheckout.htm}}
+{{MakeFullLinks:Yes}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="/bl.js"></script>
+<script type="text/javascript" src="/JQuery/jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="{{PutHName}}/custom.css">
+<script>
+$(document).ready(function(){
+if(readCookie('cart') != null) {
+var l = readCookie('cart');
+var c = readCookie('currency');
+var st = readCookie('salestax');
+var ttx = readCookie('total').replace(/[^\d\.\-]/g, "");
+$(".checkout-total .pright p").text(parseFloat(ttx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+$(".checkout-total b").text(l);
+$(".checkout-total .pright div").text(c);
+$(".checkout-shipping .pright b").text(c);
+$(".checkout-tax .pright b").text(c);
+$(".checkout-tax span .salex").text(st);
+$(".checkout-total-amount .pright b").text(c);
+for(var y = 1; y <= l; y++) {
+var i = readCookie('item' + y);
+var v = readCookie('value' + y);
+var p = readCookie('pic' + y);
+var w = readCookie('weight' + y);
+$(".checkout-load ol").append("<li><div class='li-line1'><span class='hidden-pimg'>" + p + "</span><div class='productx-img'><img src='" + p + "'></div></div><div class='li-line2'><div class='productx-name'>" + i + "</div><span class='productx-curr'>" + c + "</span><span data-value='" + v + "' class='eachPrice productx-price'>" + v + "</span><div class='qty-count'><div class='qty-div'>Quantity: </div><select name='qty' id='qty'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option></select></div><div class='sx-weight' style='display:none;'>" + w + "</div><div title='Click to Remove' class='productx-remove'><img src='/images/trash2.png'></div></li>");
+}
+var tx = parseFloat($('.checkout-total .pright p').text().replace(/[^\d\.\-]/g, ""));
+var sx = parseFloat($('.checkout-shipping .pright p').text().replace(/[^\d\.\-]/g, ""));
+var stx = (tx * st) / 100;
+$('.checkout-tax .pright p').text(parseFloat(stx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var stxx = parseFloat($('.checkout-tax .pright p').text().replace(/[^\d\.\-]/g, ""));
+var fx = parseFloat(tx + sx + stxx);
+$('.checkout-total-amount .pright p').text(parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+createCookie('orderx-amount',parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+$('.li-line2').each(function(){
+$(this).children('.qty-count').attr('name', $(this).children('.qty-count').children('#qty').val());
+});
+var orderx = $('.li-line2 .productx-name').map(function(){ 
+return $(this).text(); 
+}).get().join(', ');
+createCookie('orderx-textarea',orderx);
+}
+});
+$(window).bind('load', function(){
+$('.pro-loader').animate({opacity: 0}, 500, function() {$('.loader').css('display','none');});
+$('.checkout-container').css('visibility','visible');
+$('.checkout-container').animate({opacity: 1}, 1000);
+var a = setInterval(function () {
+if($('.ShippingMethods').length){
+$(".hcdiv").clone().appendTo( ".li-line2" );
+$('.sx-weight').each(function(){
+$(this).siblings('.hcdiv').prepend($(this).clone());
+});
+
+$('.li-line2 .hcdiv').each(function(){
+var w = $(this).children('.sx-weight').text();
+$(this).children('.ShippingMethods').children('.s-rates').children('p').each(function(){
+if(parseFloat(w) === parseFloat($(this).attr('name')) ) {
+$(this).addClass('p-matched');
+} 
+else if(parseFloat(w) < parseFloat($(this).attr('name')) ) {
+$(this).addClass('p-more');
+}
+else if(parseFloat(w) > parseFloat($(this).attr('name')) ) {
+$(this).addClass('p-less');
+}
+});
+});
+$('.s-rates').each(function(){
+if($(this).children('p.p-matched').length){
+$(this).children('p.p-less').remove();
+$(this).children('p.p-more').remove();
+}
+else if($(this).children('p.p-less').length && $(this).children('p.p-more').length){
+$(this).children('p.p-less').remove();
+$(this).children('p.p-more').addClass('pm-remove');
+$(this).children('p.p-more:first-child').removeClass('pm-remove');
+$(this).children('p.pm-remove').remove();
+}
+else if($(this).children('p.p-less').length && !$(this).children('p.p-more').length){
+$(this).children('p.p-less').addClass('pl-remove');
+$(this).children('p.p-less:last-child').removeClass('pl-remove');
+$(this).children('p.pl-remove').remove();
+}
+else if(!$(this).children('p.p-less').length && $(this).children('p.p-more').length){
+$(this).children('p.p-more').addClass('pl-remove');
+$(this).children('p.p-more:first-child').removeClass('pl-remove');
+$(this).children('p.pl-remove').remove();
+}
+});
+$('.li-line2 .hcdiv .ShippingMethods').each(function(){
+var k = $(this).children('.s-method').text();
+var v = $(this).children('.s-rates').children('p').text();
+$(this).after('<option value="' + v + '">' + k + '</option>');
+});
+$('.li-line2 .hcdiv .ShippingMethods').remove();
+$('.hcdiv .sx-weight').remove();
+$('.li-line2 .hcdiv').each(function(){
+$(this).children('option').wrapAll('<select class="ss-select" />');
+$(this).prepend('<div class="shipping-div">Choose Shipping Method: </div><div class="eachPrice2" style="display:none;"></div>');
+});
+$('.li-line2 .hcdiv').css('display','block');
+$('.eachPrice2').each(function(){
+$(this).text($(this).siblings('.ss-select').val());
+});
+$('.hcdiv').each(function(){
+$(this).attr('data',$(this).children('.ss-select').val());
+});
+var t = 0;
+$(".hcdiv .ss-select").each(function (){ 
+var p = parseFloat($(this).val());
+t+=p;
+});
+$(".checkout-shipping p").text(parseFloat(t).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var tx = parseFloat($('.checkout-total .pright p').text().replace(/[^\d\.\-]/g, ""));
+var sx = parseFloat($('.checkout-shipping .pright p').text().replace(/[^\d\.\-]/g, ""));
+var st = readCookie('salestax');
+var stx = (tx * st) / 100;
+$('.checkout-tax .pright p').text(parseFloat(stx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var stxx = parseFloat($('.checkout-tax .pright p').text().replace(/[^\d\.\-]/g, ""));
+var fx = parseFloat(tx + sx + stxx);
+$('.checkout-total-amount .pright p').text(parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+createCookie('orderx-amount',parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+$('.checkout-choose').append($("li:first-child .li-line2 .hcdiv .ss-select").clone());
+if($('.checkout-choose .ss-select option').length == 1) {
+$('.checkout-choose .ss-select').css('display','none');
+$('.checkout-choose .shipping-divx').css('display','none');
+$('.checkout-choose').append('<span>' + $(".checkout-choose .ss-select option").text() + '</span>');
+}
+createCookie('orderx-shipping', $('.checkout-choose .ss-select option:selected').text());
+$('.checkout-choose .ss-select').change(function(){
+createCookie('orderx-shipping', $('.checkout-choose .ss-select option:selected').text());
+var sn = $(".checkout-choose .ss-select").prop('selectedIndex');
+$('.li-line2').each(function(){
+$(this).children('.hcdiv').children('.ss-select').children('option:eq(' + sn + ')').attr('selected', 'selected');
+$(this).children('.hcdiv').attr('data', $(this).children('.hcdiv').children('.ss-select').val());
+var sq = parseFloat($(this).children('.qty-count').attr('name'));
+var ss = parseFloat($(this).children('.hcdiv').attr('data'));
+var sr = ss * sq;
+$(this).children('.hcdiv').children('.eachPrice2').text(parseFloat(sr).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+setTimeout(function(){
+var totalPrice = 0;
+$(".eachPrice2").each(function (){ 
+var p = parseFloat($(this).text().replace(/[^\d\.\-]/g, ""));
+totalPrice+=p;
+});
+$(".checkout-shipping .pright p").text(parseFloat(totalPrice).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var tx = parseFloat($('.checkout-total .pright p').text().replace(/[^\d\.\-]/g, ""));
+var sx = parseFloat($('.checkout-shipping .pright p').text().replace(/[^\d\.\-]/g, ""));
+var st = readCookie('salestax');
+var stx = (tx * st) / 100;
+$('.checkout-tax .pright p').text(parseFloat(stx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var stxx = parseFloat($('.checkout-tax .pright p').text().replace(/[^\d\.\-]/g, ""));
+var fx = parseFloat(tx + sx + stxx);
+$('.checkout-total-amount .pright p').text(parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+createCookie('orderx-amount',parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+}, 500);
+});
+});
+}
+
+if($('.checkout-choose .ss-select').length == 0) {
+$('.checkout-choose .ss-select').css('display','none');
+$('.checkout-choose .shipping-divx').css('display','none');
+$('.li-line2').append('<span style="display: none;" id="hcdiv" name="hcdiv" class="hcdiv" data="0"><div class="eachPrice2" style="display:none;">0</div></span>');
+$('.checkout-choose').append('<span>Free Shipping</span>');
+createCookie('orderx-shipping', 'Free Shipping');
+$('.checkout-shipping, .checkout-shipping-div, .checkout-choose').css('display','none');
+}
+
+if(readCookie('salestax') == "" || readCookie('salestax') == "0") {
+$('.checkout-tax').css('display','none');
+}
+
+$('.li-line2').each(function(){
+var vq = $(this).children('.productx-price').text().replace(/[^\d\.\-]/g, "");
+$(this).children('.qty-count').children('#qty').change(function(){
+$(this).parents('.qty-count').attr('name', $(this).val());
+var sq = parseFloat($(this).parents('.qty-count').siblings('.hcdiv').attr('data'));
+var qq = $(this).val();
+var px = vq * qq;
+var sx = sq * qq;
+$(this).parents('.qty-count').siblings('.productx-price').text(parseFloat(px).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+$(this).parents('.qty-count').siblings('.hcdiv').children('.eachPrice2').text(parseFloat(sx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+setTimeout(function(){
+var x = 0;
+$(".eachPrice").each(function (){ 
+var p = parseFloat($(this).text().replace(/[^\d\.\-]/g, ""));
+x+=p;
+});
+$(".checkout-total .pright p").text(parseFloat(x).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var y = 0;
+$(".eachPrice2").each(function (){ 
+var z = parseFloat($(this).text().replace(/[^\d\.\-]/g, ""));
+y+=z;
+});
+$(".checkout-shipping .pright p").text(parseFloat(y).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var tx = parseFloat($('.checkout-total .pright p').text().replace(/[^\d\.\-]/g, ""));
+var sx = parseFloat($('.checkout-shipping .pright p').text().replace(/[^\d\.\-]/g, ""));
+var st = readCookie('salestax');
+var stx = (tx * st) / 100;
+$('.checkout-tax .pright p').text(parseFloat(stx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var stxx = parseFloat($('.checkout-tax .pright p').text().replace(/[^\d\.\-]/g, ""));
+var fx = parseFloat(tx + sx + stxx);
+$('.checkout-total-amount .pright p').text(parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+createCookie('orderx-amount',parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+}, 500);
+});
+$(this).children('.productx-remove').click(function(){
+$(this).siblings('.productx-price').text('0');
+$(this).siblings('.hcdiv').children('.eachPrice2').text('0');
+setTimeout(function(){
+var x = 0;
+$(".eachPrice").each(function (){ 
+var p = parseFloat($(this).text().replace(/[^\d\.\-]/g, ""));
+x+=p;
+});
+$(".checkout-total .pright p").text(parseFloat(x).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var y = 0;
+$(".eachPrice2").each(function (){ 
+var z = parseFloat($(this).text().replace(/[^\d\.\-]/g, ""));
+y+=z;
+});
+$(".checkout-shipping .pright p").text(parseFloat(y).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var tx = parseFloat($('.checkout-total .pright p').text().replace(/[^\d\.\-]/g, ""));
+var sx = parseFloat($('.checkout-shipping .pright p').text().replace(/[^\d\.\-]/g, ""));
+var st = readCookie('salestax');
+var stx = (tx * st) / 100;
+$('.checkout-tax .pright p').text(parseFloat(stx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+var stxx = parseFloat($('.checkout-tax .pright p').text().replace(/[^\d\.\-]/g, ""));
+var fx = parseFloat(tx + sx + stxx);
+$('.checkout-total-amount .pright p').text(parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+createCookie('orderx-amount',parseFloat(fx).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+}, 500);
+$(this).parents('.li-line2').parents('li').remove();
+$('.checkout-total b').text($('.checkout-load ol li').length);
+var orderx = $('.li-line2 .productx-name').map(function(){ 
+return $(this).text(); 
+}).get().join(', ');
+createCookie('orderx-textarea',orderx);
+var n = readCookie('cart');
+for(var m = 1; m <= n; m++) {
+eraseCookie('item' + m);
+eraseCookie('value' + m);
+eraseCookie('pic' + m);
+eraseCookie('weight' + m);
+}
+createCookie('cart', $('.checkout-load ol li').length);
+var o = readCookie('cart');
+for(var p = 1; p <= o; p++) {
+createCookie('item' + p, $('.checkout-load ol li:nth-child(' + p + ') .li-line2 .productx-name').text());
+createCookie('value' + p, $('.checkout-load ol li:nth-child(' + p + ') .li-line2 .eachPrice').attr('data-value'));
+createCookie('pic' + p, $('.checkout-load ol li:nth-child(' + p + ') .li-line1 .hidden-pimg').text());
+createCookie('weight' + p, $('.checkout-load ol li:nth-child(' + p + ') .li-line2 .sx-weight').text());
+}
+setTimeout(function(){
+if($(".checkout-total-amount .pright p").text() == "0.00" || $(".checkout-total-amount .pright p").text() == "0.0" || $(".checkout-total-amount .pright p").text() == "0") {
+$('.checkout-container').css('display','none'); 
+$('.checkout-empty').css('display','block');
+}
+}, 700);
+});
+});
+clearTimeout(a);
+}, 500);
+});
+</script>
+</head>
+<body class="checkout-body">
+<div class="pro-loader"></div>
+<div class="checkout-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Checkout</span></div>
+<div class="checkout-left">
+<div class="checkout-load"><ol></ol></div>
+</div>
+<div class="checkout-label checkout-shipping-div"><span>Shipping</span></div>
+<div class="checkout-choose">
+<div class="shipping-divx">Choose Shipping Method: </div>
+</div>
+<div class="checkout-label"><span>Price Details</span></div>
+<div class="checkout-right">
+<div class="checkout-price">
+<div class="checkout-total"><span>Price (<b>1</b> items): </span><div class="pright"><div></div><p>0.00</p></div></div>
+<div class="checkout-shipping"><span>Shipping: </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-tax"><span>Sales Tax (<div class="salex"></div>): </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-total-amount"><span>Total Amount: </span><div class="pright"><b></b><p>0.00</p></div></div>
+</div>
+</div>
+<div class="checkout-button"><span><a href="{{PutHName}}/cartorder.htm">Place Order</a></span></div>
+</div>
+<div class="checkout-empty" style="display:none;">
+<div class="ce-text"><img src="/images/trash2.png"><span>Your Cart is Empty!</span></div>
+</div>
+<span style="display:none;" id="hcdiv" name="hcdiv" class="hcdiv"><script type="text/javascript" language="JavaScript">LoadDoc("{{PutHName}}/shipping.htm", "hcdiv", "");</script></span>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup666End}}
+
+
+{{LayoutArticleGroup667Begin}}
+{{LayoutArticleGroup667Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartorder.htm}}
+{{MakeFullLinks:Yes}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript">
+function createCookie(name,value,days) {
+if (days) {
+var date = new Date();
+date.setTime(date.getTime()+(days*24*60*60*1000));
+var expires = "; expires="+date.toGMTString();
+}
+else var expires = "";
+document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') c = c.substring(1,c.length);
+if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+}
+return null;
+}
+</script>
+<script type="text/javascript" src="/JQuery/jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="{{PutHName}}/custom.css">
+<script>
+$(document).ready(function(){
+var c = readCookie('currency');
+$('.order-currency b').text(c);
+$('#item_amount').attr('value',readCookie('orderx-amount'));
+createCookie('orderx-amount', readCookie('orderx-amount').replace(/[^\d\.\-]/g, ""));
+$('#item_shipping').attr('value',readCookie('orderx-shipping'));
+$('.order-row.order-text').append('<textarea class="order-textarea" id="item_names" name="item_names" rows="5" cols="50" disabled>' + readCookie('orderx-textarea') + '<\/textarea>');
+var pp = "/target_form2.asp?smenu=&minForm=Y&pform=PAYMENT3_PayPalStandard&hn={{HostName}}";
+var cc = "/target_form2.asp?app=&twindow=Form&smenu=&minform=Y&x_amount=" + readCookie('orderx-amount') + "&x_invoice_num=bXMgW35275!Custom&x_description=Shopping&pform=PAYMENT1_CreditCard_Online&sc=5982&hn={{HostName}}&he=";
+$('.OrderFormx').attr('href',cc);
+createCookie('orderx-payment', $('#payment').val());
+$('#payment').change(function(){
+createCookie('orderx-payment', $('#payment').val());
+if(readCookie('orderx-payment') == "PayPal"){
+$('.OrderFormx').attr('href',pp);
+}
+else if(readCookie('orderx-payment') == "Credit Card"){
+$('.OrderFormx').attr('href',cc);
+}
+});
+});
+$(window).bind('load', function(){
+$('.pro-loader').animate({opacity: 0}, 500, function() {$('.loader').css('display','none');});
+$('.order-container').css('visibility','visible');
+$('.order-container').animate({opacity: 1}, 1000);
+});
+</script>
+</head>
+<body class="order-body">
+<div class="pro-loader"></div>
+<div class="order-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Order Summary</span></div>
+<form class="OrderForm" style="width:880px;" method="POST" action="#" id="OrderForm" name="OrderForm">
+<fieldset class="order-fieldset">
+<section>
+<div class="order-row order-text">
+<label class="order-label">Items</label>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Amount (<b></b>)</label>
+<input class="order-input" id="item_amount" name="item_amount" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Shipping Method</label>
+<input class="order-input" id="item_shipping" name="item_shipping" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label">Choose Payment</label>
+<select id="payment" name="payment" required><option>Credit Card</option><option>PayPal</option></select>
+</div>
+</section>
+<footer class="order-footer">
+<input style="display:none;" type="submit" value="Order Now" id="OrderSubmit" name="OrderSubmit" class="order-button">
+<a class="OrderFormx" href="#">Confirm <b>&</b> Proceed to Pay</a>
+</footer>
+</fieldset>
+<div class="productx-ssl"><img alt="SSL Security" src="/images/ssl_security.jpg" width="100"></div>
+</form>
+</div>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup667End}}
