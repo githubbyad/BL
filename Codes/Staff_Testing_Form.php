@@ -262,25 +262,29 @@ more {
   margin-bottom: 100px;
 }
 more cat {
-  background: #87b536;
-  padding: 0 30px;
-  line-height: 40px;
-  display: inline-block;
-  border-radius: 4px;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  font-style: normal;
-  box-shadow: 0 3px 0px #528001;
-  text-shadow: 0px 2px 0px rgba(0,0,0,0.2);
-  font-size: 16px;
+	padding: 0 30px;
+	line-height: 40px;
+	display: inline-block;
+	border-radius: 4px;
+	cursor: pointer;
+	/* color: white; */
+	font-weight: bold;
+	font-style: normal;
+	box-shadow: 0 3px 0px #80a7df;
+	text-shadow: 0px 2px 0px rgba(0,0,0,0.2);
+	font-size: 16px;
+	border: 2px solid #0d6efd;
+	color: #0d6efd;
 }
 more[count="1"] rm {
 	display: none;
 }
+more cat:hover {
+	background: #0d6efd;
+	color: white;
+}
 
 more rm {
-	background: #db1515;
 	padding: 0 30px;
 	line-height: 40px;
 	display: inline-block;
@@ -289,10 +293,16 @@ more rm {
 	color: white;
 	font-weight: bold;
 	font-style: normal;
-	box-shadow: 0 3px 0px #841111;
+	box-shadow: 0 3px 0px #f47878;
 	text-shadow: 0px 2px 0px rgba(0,0,0,0.2);
 	font-size: 16px;
 	margin-left: 30px;
+	color: #db1515;
+	border: 2px solid #db1515;
+}
+more rm:hover {
+	background: red;
+	color: white;
 }
 </style>
 </body>
