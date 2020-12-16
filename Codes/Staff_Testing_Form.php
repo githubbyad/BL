@@ -416,6 +416,9 @@ th {
 	background: #0882c4;
 	color: white;
 }
+td {
+	white-space: pre-wrap;
+}
 tr:hover td {
   background: #333;
   color: white;
