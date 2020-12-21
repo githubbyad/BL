@@ -1,0 +1,274 @@
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{SortBy:Issue,Updated}} 
+{{RemoveHTMLBody}}
+{{ReplaceJavascriptChars:No}}
+{{RepeatBegin}}
+{{If Counter=1}}
+<div id="main_SEC_601" class="hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="custom_menu_SEC_601 custom_background_{{MenuId}}"><span class="menu_SEC_601 custom_border_{{MenuId}}">{{Menu}}</span>
+<span class="sub-menu_SEC_601 custom_menu_{{MenuId}}">{{SubMenu}}</span>
+</div>
+<div id="image_wrapper_SEC_601">
+<div id="image_holder_SEC_601">
+<div id="image_SEC_601"><a href="{{HeadingLink}}"><img class="img_SCE_601"src="{{HeadingImage}}" alt=""></a></div>
+<div id="heading_wrapper_SEC_601">
+<div class="date1_SEC_601 custom_background_{{MenuId}}">
+<div class="IssueDate_SEC601">
+<div class="month_SEC_601">{{MonthU2}}</div>
+<div class="date_SEC_601">{{DayU}}</div>
+</div>
+</div>
+<div id="heading_SEC_601"> <a href="{{HeadingLink}}" class="heading_SCE_601 cusom_SEC_{{Counter}}"> {{Heading}}</a></div>
+</div>
+</div>
+</div>
+<div id="body_wrapper_SEC_601">
+<div id="body_SEC_601"> <span class="body_SEC_601">{{Body}}</span></div>
+<div class="more_SEC_601 custom_color_{{MenuId}}"><a href="{{HeadingLink}}">MORE <i class="fa fa-arrow-circle-right"></i> </a></div>
+</div>
+
+</div>
+{{ElseIf Counter<=7}}
+<div class="main_SEC_601_A space_{{Counter}} hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div id="image_SEC_601_A"><a href="{{HeadingLink}}"><img class="img_SCE_601_A"src="{{HeadingImage}}" alt=""></a></div>
+<div id="heading_SEC_601_A"> <a href="{{HeadingLink}}" class="heading_SCE_601_A custom_color_{{MenuId}}"> {{Heading}}</a></div>
+<div id="date_SEC_601_A">
+<div class="IssueDate_SEC601_A">{{<span class="layout_date"></span>:IssueDate}}</div>
+<div class="social_SEC_601">
+</div>
+</div>
+</div>
+{{Else}}
+<div id="main_archive_SEC_601" class="hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div id="archive_heading_SEC601">
+<div class="archive_IssueDate_SEC601 custom_border_{{MenuId}}">
+<div class="date_archive_SEC_601 custom_color_{{MenuId}}">{{DayU}}</div>
+<div class="month_archive_SEC_601 custom_color_{{MenuId}}">{{MonthU2}}</div></div>
+<div id="archive_heading_wrapper_SEC601">
+<a href="{{HeadingLink}}" class="archive_heading_SEC601"> {{Heading}}</a></div>
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
+
+{{ArticleValuesBegin}}
+<div class="hpe-article-detail" data-detailid="{{ArticleId}}">
+    <div id="main_DEF">
+        <div class="custom_menu_DEF custom_background_{{MenuId}}">
+            <span class="menu_DEF custom_border_{{MenuId}}">{{Menu}}</span>
+            <span class="sub-menu_DEF custom_menu_{{MenuId}}">{{SubMenu}}</span>
+        </div>
+        <div id="image_wrapper_DEF">
+            <div id="image_holder_DEF">
+                <div id="image_DEF">{{<img class="img_DEF" src=":Picture1:">}}</div>
+                    <div class="pagephotocaption layout_pagephotocaption ">{{Picture1Caption}}</div>
+                    <div id="heading_wrapper_DEF">
+                    <div class="date1_DEF custom_background_{{MenuId}}">
+                        <div class="IssueDate_SEC601">
+                            <div class="month_DEF">{{MonthU2}}</div>
+                            <div class="date_DEF">{{DayU}}</div>
+                        </div>
+                    </div>
+                    <div class="heading_DEF">
+                        <span class="heading_DEF_601">{{Heading}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body_wrapper_DEF">
+            <div class="sharebody layout_sharebody pageheading top_share" align="left">{{ShareToolsTop}}</div>
+            <div id="body_DEF"> <span class="body_DEF">{{Body}}</div>
+            <div class="sharebody layout_sharebody bottom_share" align="left">{{<br>:ShareToolsBottom}}</div>
+            <div class="opinionbody layout_opinionbody" align="left">{{AllowComments:<br>}}</div>
+            <div class="pageruler layout_pageruler">
+                <span style="FONT-SIZE: 0pt;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+{{ArticleValuesEnd}}
+
+
+
+{{FormValuesBegin}} 
+
+{{ReplaceFieldHelpWithFieldCaption:Yes}}
+{{RequiredValue:*}}
+{{SelectValue:Select}}
+{{FieldHelpValue:<b class="tooltip tooltip-top-right"><<FieldHelp>></b>}}
+{{SSLSecurityValue:<img alt="SSL Security" width=100 src="/images/ssl_security.jpg">}}
+{{TextAreaCount:<label id="<<FieldName>>-memo4"></label> <label id="<<FieldName>>-memo42"></label>}}
+{{FixedValue1:onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, ' formfieldinput_custom formfieldinput')"}}
+{{FixedValue2:onfocus=onchange="this.parentNode.nextSibling.value = this.value.replace(/.*[\/\\]/, '');"}}
+
+<!--FormError-->
+<!--FormMessage-->
+<form class="custom-form" enctype="multipart/form-data" autocomplete="off" id="CustomForm" method="post" name="CustomForm" onsubmit="return Vailidate(this)" >
+<!--FKeys-->
+{{FormEmailSubject}} 
+{{FormEmailConfirmMessage}} 
+{{FormEmailFormat}} 
+{{FormEmailTo}} 
+{{FormEmailCC}}
+<header>
+{{FormTitle}}
+</header>
+<fieldset>
+<div class="system_text Header_text">
+{{FormHeader}}
+</div>
+
+{{RepeatBegin}} 
+
+{{If FieldType=System}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput_custom formfieldinput formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=ReadOnly}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" readonly class="formfieldinput_custom formfieldinput formfieldinput_ReadOnly" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Divider}}
+
+<section>
+<div class="label">
+<div class="inp_custom">
+<div class="formdivider formdivider_custom">
+{{FieldCaption}}
+</div>
+</div>
+</div>
+</section>
+
+{{ElseIf FieldType=Memo}}
+
+<section>
+<label class="input">
+<label class="textarea">
+<{{TextArea}} class="formfieldinput formfieldinput_custom" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}"></{{TextArea}}>
+{{FieldHelp}}
+</label>
+<div class="formfieldname" style="text-align: left;">
+<label class="textarea">{{TextAreaCount}}</label>
+</div>
+</label>
+</section>
+
+{{ElseIf FieldType=File}}
+
+<section>
+<label for="file" class="inp1 input input-file">
+<div class="button formbutton"><input type="file"  name="{{FieldName}}" class="formfieldinput_custom formfieldinput" {{FixedValue2}}>Browse</div><input id="{{FieldName}}" name="{{FieldName}}" type="text" {{FixedValue1}} placeholder="Upload file" class="formfieldinput formfieldinput_custom" READONLY="" ID="{{FieldName}}-Browse" VALUE="">
+</label>
+{{FieldHelp}}
+</section>
+
+{{ElseIf FieldType=Password}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="password"  class="formfieldinput_custom formfieldinput" {{FixedValue1}} placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Date}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldCaption}}{{FieldRequired}}" id="{{FieldName}}" {{FixedValue1}} onkeypress="return false;" class="formfieldinput formfieldinput_custom" readonly style="cursor: default;" type="text" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=DropDown}}
+
+<section>
+<label class="label">
+<label class="select">
+<select id="{{FieldName}}" name="{{FieldName}}" class="formfieldinput_custom formfieldinput">
+{{FieldDropDown}}
+</select> <i></i>
+</label>
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Hidden}} 
+
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="hidden" value="{{FieldDefaultValue}}"> 
+
+{{ElseIf FieldType=Decimal}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="text"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class=" formfieldinput_custom formfieldinput" {{FixedValue1}} maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Number}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="Number"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput_custom formfieldinput" {{FixedValue1}} maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=CheckBox}} 
+
+<section>
+<label class="checkbox state-error"><input id="{{FieldName}}" name="{{FieldName}}"  type="checkbox" name="checkbox"><i></i>{{FieldRequired}}{{FieldCaption}}</label>
+</section>
+
+{{ElseIf FieldType=Captcha}}
+
+<section>
+<label class="input">
+{{FieldCaptcha}}
+</label>
+</section>
+
+{{Else}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" maxlength="{{FieldLength}}" {{FixedValue1}} placeholder="{{FieldCaption}}{{FieldRequired}}" type="text" class="formfieldinput_custom formfieldinput" >
+{{FieldHelp}}
+</label>
+</section>
+
+{{EndIf}} 
+
+{{RepeatEnd}}
+
+<div class="system_text footer_text">
+{{FormFooter}}
+</div>
+</fieldset>
+<footer>
+<button class="button formbutton" type="submit">{{FormButtonSubmit}}</button>
+</footer>
+<script language="JavaScript" type="text/javascript">LoadDoc("/get_sc.asp", "hcdiv", "");</script> 
+<script language="javascript">GetTooltipSys1();</script> 
+<script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+</form>
+<br>
+<center>{{SSLSecurityValue}}</center>
+<br>
+{{FormValuesEnd}}
