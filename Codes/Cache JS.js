@@ -24,6 +24,9 @@ for (var i = 0; i < links.length; i++) {
     if (scrpt.src.indexOf('custom.js?') != -1) {
         scrpt.src += "v=" + vl;
     }
+    if (scrpt.src.indexOf('{{PutTFolder}}.js?') != -1) {
+        scrpt.src += "v=" + vl;
+    }
 }
 }
 </script>
