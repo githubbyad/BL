@@ -13,16 +13,16 @@ var vl = dt + '' + mn + '' + y + '' + h + '' + m + '' + s;
 var links = document.getElementsByTagName("link");
 for (var i = 0; i < links.length; i++) {
     var link = links[i];
-    if (link.rel === "stylesheet") {
-        link.href += "?v=" + vl;
+    if (link.href.indexOf('custom.css?') != -1) {
+        link.href += "v=" + vl;
     }
 }
 
 var scrt = document.getElementsByTagName("script");
 for (var i = 0; i < links.length; i++) {
     var scrpt = scrt[i];
-    if (scrpt.src.indexOf('custom.js') != -1) {
-        scrpt.src += "?v=" + vl;
+    if (scrpt.src.indexOf('custom.js?') != -1) {
+        scrpt.src += "v=" + vl;
     }
 }
 }
