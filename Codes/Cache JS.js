@@ -11,13 +11,13 @@
         var vl_che = dt_che + '' + mnt_che + '' + y_che + '' + h_che + '' + m_che + '' + s_che;
         var scrt = document.getElementsByTagName("script");
         var lnks = document.getElementsByTagName("link");
-        var che_js = ["{{PutTFolder}}.", "custom", "Menus-Horizontal", "jscript", "preview", "articlegroup"];
+        var che_js = ["{{PutTFolder}}.", "custom", "menus-horizontal", "jscript", "preview", "articlegroup"];
         var che_cs = ["custom", "layout"];
         for (var i = 0; i < scrt.length; i++) {
             var c_j;
             for (c_j = 0; c_j < che_js.length; c_j++) {
                 var scrpt = scrt[i];
-                if (scrpt.src.indexOf(che_js[c_j]) != -1 && scrpt.src.endsWith('.js?') == true) {
+                if (scrpt.src.toLowerCase().indexOf(che_js[c_j]) != -1 && scrpt.src.toLowerCase().endsWith('.js?') == true) {
                     scrpt.src += "v=" + vl_che;
                 }
             }
@@ -26,7 +26,7 @@
             var c_cs;
             for (c_cs = 0; c_cs < che_cs.length; c_cs++) {
                 var link = lnks[i];
-                if (link.href.indexOf(che_cs[c_cs]) != -1 && link.href.endsWith('.css?') == true) {
+                if (link.href.toLowerCase().indexOf(che_cs[c_cs]) != -1 && link.href.toLowerCase().endsWith('.css?') == true) {
                     link.href += "v=" + vl_che;
                 }
             }
