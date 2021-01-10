@@ -1,27 +1,25 @@
 Hi,
 
-Please follow the below steps to place additional image in article,
+Please follow the below steps,
 
-&nbsp; &nbsp; 1. Click on "Files" icon form "Site Manager".
+&nbsp; &nbsp; 1. Click on "Articles" icon from "Site Manager".
 
-&nbsp; &nbsp; 2. Click on "new" from the top.
+&nbsp; &nbsp; 2. Click "edit" on any article.
 
-&nbsp; &nbsp; 3. Fill out all the required fields and upload image.
+&nbsp; &nbsp; 3. Click on any PageDesigner.
 
-&nbsp; &nbsp; 4. Click on "submit".
+&nbsp; &nbsp; 4. Click on image icon as shown in below screenshot.
 
-&nbsp; &nbsp; 5. Click on "view command" in front of newly uploaded image.
+&nbsp; &nbsp; &nbsp; &nbsp; https://i.snipboard.io/OCKGWD.jpg
 
-&nbsp; &nbsp; 6. Copy the code from "Link" box.
+&nbsp; &nbsp; 5. It will open popup screen having three fields including image caption and image alignment. See below screenshot,
 
-&nbsp; &nbsp; 7. Now, go to "Site Manager" and click on "Articles" icon.
+&nbsp; &nbsp; &nbsp; &nbsp; https://i.snipboard.io/3s6dtS.jpg
 
-&nbsp; &nbsp; 8. Click "edit" on any article or click on "new" to create new article.
+&nbsp; &nbsp; 6. Please upload image, write caption and choose alignment as per requirement.
 
-&nbsp; &nbsp; 9. Place the copied code in anywhere in "Body" field.
+&nbsp; &nbsp; 7. Click on "Upload" and it will generate the code that you can place in your article.
 
-&nbsp; &nbsp; 10. Click on "submit".
-
-Please visit your homepage and press Ctrl+F5 or click on reload icon on your browser to see the updated changes.
+Please let us know how it works.
 
 Thank you.
