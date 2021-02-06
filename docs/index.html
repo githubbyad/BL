@@ -21,7 +21,7 @@
             var d2 = d1 - 1;
             var d3 = d1 - 2;
             $('.tdd').each(function() {
-                if ($(this).attr('data-month') == "12") {
+                if ($(this).attr('data-month') == $('.month').text()) {
                     if ($(this).text() == d1 || $(this).text() == d2 || $(this).text() == d3) {
                         $(this).parent('tr').addClass('latest');
                     }
@@ -35,6 +35,20 @@
                         $(this).parent('tr').addClass('o3');
                     }
                 }
+                /*if ($(this).attr('data-month') == "2") {
+                    if ($(this).text() == d1 || $(this).text() == d2 || $(this).text() == d3) {
+                        $(this).parent('tr').addClass('latest');
+                    }
+                    if ($(this).text() == d1) {
+                        $(this).parent('tr').addClass('o1');
+                    }
+                    if ($(this).text() == d2) {
+                        $(this).parent('tr').addClass('o2');
+                    }
+                    if ($(this).text() == d3) {
+                        $(this).parent('tr').addClass('o3');
+                    }
+                }*/
             });
             $('td:nth-child(3)').each(function() {
                 if ($(this).text() == '') {
@@ -249,6 +263,10 @@
         
         .tdd[data-month="12"]::after {
             content: " Dec";
+        }
+        
+        .tdd[data-month="2"]::after {
+            content: " Feb";
         }
         
         tbody {
@@ -768,22 +786,50 @@
                     <green>Added test tooltip on logo, ad, google search and social links</green>
                 </td>
             </tr>
-    <tr>
+            <tr>
                 <td>50</td>
                 <td>Allow new line (enter key) inside "Sections" icon. Currently, it I press enter, it messed up hostname.js</td>
                 <td class="tdd" data-month="12">29</td>
                 <td class="s">PENDING</td>
                 <td>
-                    <red>Need to fix this as client may press enter key to add new line and it creates issues</red><br><green>Replace new line with BR tag to fix this issue.</green>
+                    <red>Need to fix this as client may press enter key to add new line and it creates issues</red><br>
+                    <green>Replace new line with BR tag to fix this issue.</green>
                 </td>
             </tr>
-     <tr>
+            <tr>
                 <td>51</td>
                 <td>Hide Home menu from "Menu" field in article screen. New clients are placing article in this Home menu and it will not show full article if they click on it.</td>
                 <td class="tdd" data-month="12">29</td>
                 <td class="s">PENDING</td>
                 <td>
                     <green>Need to set "Page Type = Home" other than "Article" which creates this issue.</green>
+                </td>
+            </tr>
+            <tr>
+                <td>52</td>
+                <td>Submenu having "Page Type = Article" is creating issue if we place A tag in "Sub Menu(HTML)" field. </td>
+                <td class="tdd" data-month="02">06</td>
+                <td class="s">PENDING</td>
+                <td>
+                    <red>It should use Submenu name instead of using full code we place {{SubMenu}} in layout</red>
+                </td>
+            </tr>
+            <tr>
+                <td>53</td>
+                <td>#hpe_supporti is adding in URL if we visit ticket page from live builder. It should get removed on website.</td>
+                <td class="tdd" data-month="02">06</td>
+                <td class="s">PENDING</td>
+                <td>
+                    <red>I will fix that from my side</red>
+                </td>
+            </tr>
+            <tr>
+                <td>54</td>
+                <td>#hpe_supporti is adding in URL if we visit ticket page from live builder. It should get removed on website.</td>
+                <td class="tdd" data-month="02">06</td>
+                <td class="s">PENDING</td>
+                <td>
+                    <red>Faced this issue on live clients and removed {{PutHName}} from Menu link from few client's sites.<br>Investigating...</red>
                 </td>
             </tr>
         </table>
@@ -989,403 +1035,6 @@
             opacity: 1 !important;
         }
     </style>
-    <div id="Feedback2">
-        <h2 class="r2">Round 2 - Feedback from Staff</h2>
-
-        <div class="staff juned">
-            <h3>Juned</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>I have hover on mozila in music and found the issue. See the below screenshot. https://i.snipboard.io/MqVBQU.jpg
-
-                </td>
-                <td class="fx">FIXED</td>
-                <td>It is fixed. Missed to submit "Music" article.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Found big issue. See below my example. If i rename my section preview name from editor its also rename my sub-menu name. Can we added pure text for this so we dont have to renamed sub-menu name also. see my screenshot. I will guide you
-                    proper on call for this. https://i.snipboard.io/Xm7sU2.jpg
-
-                </td>
-                <td class="fx">FIXED</td>
-                <td>Its preview section submenu we are placing. If you want to place our own text, that is also possible. You can see Highlight4 title we can change by our won text, sameway we can do here.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>I have renamed business to business-juned but its not working. See my screenshot. Its renamed sub-menu name but not the title. https://i.snipboard.io/lPaUDA.jpg
-                </td>
-                <td class="px">PENDING</td>
-                <td>Sometime it shows issue only with Previews. This is also happening when we were doing earlier.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Taking on delete button its take to many times. Its take me about 15 to 16 sec on Mozilla. Also there is no warning alert for delete.</td>
-                <td class="px">PENDING</td>
-                <td>Added in next update</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>After clicking on any button like submit delete or update hover effect take to to show on sections. On both browsers.</td>
-                <td class="none">Meeting</td>
-                <td>Provide more details to understand this request.</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Can we increase the highlight or section preview limit? for my self?</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>an we also add hover tooltip for ads? like we have added ad image in "AdGroup14" 470 X 60. So we cna show small tool tip for image size.</td>
-                <td class="nx">Not Required</td>
-                <td>I already added tooltip, but it was creating issue with editor box as tooltip is not getting out easily. So I removed it.</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>It is possible to change background image also?</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>It is possible to delete wholl section like sport, travel,tech?</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Tool tip text is wrong on below screen. https://i.snipboard.io/dv2IUb.jpg
-
-                </td>
-                <td class="fx">FIXED</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>I cant play videos on the hover? what if i want to check its working or not?</td>
-                <td class="nx">Not Required</td>
-                <td>This is editor part, so you have to click on "Preview" link from top to visit actual site to play video or visit article.</td>
-            </tr>
-        </table>
-
-        <div class="staff usman">
-            <h3>Usman</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>I have created a new Menu "USMAN" but the submenu also showing. I just need a menu. How to hide and submenu</td>
-                <td class="fx">FIXED</td>
-                <td>If you add only menu without sub-menu, you cannot see that menu on website. New Submenu is automatically added by Sir and we can do anything with that sub-menu, hide or rename, etc.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Sites take time to load when we update anything. Like logo, ad or menu.</td>
-                <td class="none">Meeting</td>
-                <td>Site is heavily loaded with all contents like video gallery, Photo gallery, evet, 3 highlights, etc. Hence it will take time to load. However, it is not taking more time which we have faced in Round 1 testing</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>I have added the "Let's End Child Trafficking" ad with order number 1, but it's showing on 3rd spot.</td>
-                <td class="fx"></td>
-                <td>Above two ads having order number 0. Hence, your newly added ad with order 1 is moved to down. Do not set any order and system will set to zero by default and place the ad on top.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>I have added a new "Usman Poll" and chose poll2 but its showing at the bottom. I want my poll at first place</td>
-                <td class="none">Meeting</td>
-                <td>Currently, we don't have ordering available for Poll. If it's available, then we can arrange them as per order number or issue date. Normally Client is adding only 1/2 poll at a time. That might be the reason and Sir didn't added ordering
-                    feature here</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>I have added a new "Usman Event" its showing in two times. Under Events and More News. See screenshot. https://i.snipboard.io/CxOgqd.jpg
-
-                </td>
-                <td class="fx">FIXED</td>
-                <td>Yes, that was ArticleGroup which was added from another site and submenu was not excluded. I added submenu pkey to exclude event, video, photo gallery.</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>I have added an article in the "Sports" section preview, i saw the all-article page. See screenshot. https://i.snipboard.io/O3QYMf.jpg Need to see an added successful message. Like when upload article in "H1" H2" etc.</td>
-                <td class="fx">FIXED</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Same as above mention in all section preview.</td>
-                <td class="fx">FIXED</td>
-                <td></td>
-            </tr>
-        </table>
-
-
-        <div class="staff zaid">
-            <h3>Zaid</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Need to have control to change the position of the ad in same column up and down.</td>
-                <td class="vx">Version 2</td>
-                <td>That will be possible in same column if flex is used to order them. Need separate form for this.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Same goes for the article as well</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>if possible need control to remove the full box, like there is 6 box of section preview and I need only 3 so I can delete the full section. just like a poll</td>
-                <td class="px">PENDING</td>
-                <td>We have now control of new "Section" icon that we can use here. It will require major changes to move codes from free layout to section. Also, we need to think about SEO which requires to show article on homepage view source.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>We need control to change bg image of the site</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Color theme of the site</td>
-                <td class="none">Meeting</td>
-                <td>We have already done in Template#113. Same way we can apply for other templates, but not for all.</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>If the possible client can change the limit of the group. highlights,preview</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-        </table>
-
-
-        <div class="staff imran">
-            <h3>Imran</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clicking on the purple box in the "powered by bulletlink.com" gives an error. I then get login issues as it tries to login into bulletlink.com and not the demo website. Also if I were to rename "powered by bulletlink.com" would it always
-                    go to bulletlink.com? I think removing it would be better.</td>
-                <td class="none">Meeting</td>
-                <td>Login issue might be due to command issue which I already discussed with Sir. Actually, {{Home}} command is printing double slash which sometimes creates login issues. Sir will fix that command. For link issue, it is our bulletlink's reference
-                    line and I added editor just to modify text. I will discuss with to place editor around this reference line or not.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Clicked on the plus icon to add a new ad beside the logo. It added it successfully but can't see it. I have to delete the previous ad in order to see it. It seems I can only have one ad beside the logo.</td>
-                <td class="vx">Version 2</td>
-                <td>Yes, that top ad is aligned horizontally. Hence it will not display the ad which are out of place in top area. You can set order number to set it first. We didn't provide alignment option in this version. I will add that in next version
-                    2.
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>I clicked on plus in the contribute ad below the poll. I added a new ad but I can't see it. And what if I want to delete the contribute ad?</td>
-                <td class="vx">Version 2</td>
-                <td>That is AdGroup12 where we have set "Ad Type = SameSpotOnClick" which will show only one ad after visiting site again. Sir ha requested to disable delete button when there is only item left. To remove whole section, we need to add some
-                    alert box as it will not revert back from client site. Client has to request us to add it again. Hence, we didn't place that option in this update. I will add that in next update after discussing with Sir.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>I tried renaming photo gallery to "photo gallery aaaaaaaaaaaaaaaaaaaa" and it gets cut off and the purple box highlights the whole thing. Can you put a character limit in the form as? </td>
-                <td class="px">PENDING</td>
-                <td>Yes, I will put charter limit as this just for title. I will update that today.</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>In the "Music" preview section why does it have a plus, delete and preview link icon whereas other sections don't?</td>
-                <td class="fx">FIXED</td>
-                <td>It is fixed. It was already fixed, but I missed to submit article.</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>When I scroll all the way to the bottom and look at the footer I wait for 3-4 seconds and do nothing. It automatically scrolls up a bit to the section preview section hiding the footer. It is seen in Firefox, sometimes in Chrome but never
-                    in Edge</td>
-                <td class="fx">FIXED</td>
-                <td>Yes, this site is heavily loaded with almost all contents from our other demo sites. Hence you will see loading issue. It will not happen when Editor wilo get applied not normal sites.</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>When I renamed "Trending News" to "Trending News aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", it breaks to next line and the pruple box cannot catch it. Can you put a character limit on the form? </td>
-                <td class="px">PENDING</td>
-                <td>Same as #4</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>I cannot rename the "VIDEO GALLERY" heading.</td>
-                <td class="fx">FIXED</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>When I renamed "More News" to "More News aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", it breaks to the next line. Can you put a character limit on the form? </td>
-                <td class="px">PENDING</td>
-                <td>Same as #4</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Renaming section preview doesn't work. For example "TECH".</td>
-                <td class="px">PENDING</td>
-                <td>Sometime it shows issue only with Previews. This is also happening when we were doing earlier for clients.</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>I renamed "Need Any Further Help?" to "Need Any Further Help? aaaaaaaaaaaaaaaaaaaaaaaaa" and the design messed up a bit. I know it's part of the responsive part but can you put a character limit to the form?</td>
-                <td class="px">PENDING</td>
-                <td>Same as #4</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>Can I change the background image of the website?</td>
-                <td class="vx">version 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>Can we have an alert box before deleting an ad or article in case a user clicks on it by accident since the icons are so close to each other? </td>
-                <td class="px">PENDING</td>
-                <td>I will add it today.</td>
-            </tr>
-        </table>
-
-
-
-
-        <div class="staff owais">
-            <h3>Owais</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Logo and ads beside logo works fine . But If I update horizontal ads site looks messed up. We need to set the adgroup beside the logo as 'Vertical' type by default. So more ads will display vertically arranged.</td>
-                <td class="fx">FIXED</td>
-                <td>There was only one ad's place on top. I have changed its view from horizontal to vertical.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Adding menus fine but after adding menu, message like 'Menu added successfully' not showing on my side in any browser. This notification should come.</td>
-                <td class="fx">FIXED</td>
-                <td>Notification was there with "OK" button, but Sir has requested to remove that button. Now it will just show notification for 1/2 second.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Highlights working fine. But I ain't able to change font size or color of Title/header of Highlight. Need to add this.</td>
-                <td class="vx">Version 3</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Editing of the VIDEOS section on the right side works fine. But I have added FB video link which thumbnail not showing. But clicking on a broken thumb should play video at least. Need to fix our client also using FB videos.</td>
-                <td class="fx">FIXED</td>
-                <td>Setup was done only for Youtube Videos as per "URL". If we want to embed code, then we can do this by placing Embed version of Videos. This marked as fixed as I already have created for placing URL, ID or IFRAME/Embed code.</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Editing name of section previews not working. Even I updated/added one article but the name was not changed. This should work.</td>
-                <td class="px">PENDING</td>
-                <td>Sometime it shows issue only with Previews. This is also happening when we were doing earlier for clients.</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>While Updating article in section preview 'Add to Highlights' flags showing. This shouldn't be.</td>
-                <td class="none">Meeting</td>
-                <td>This is alreay fixed in first update and I am not seeing any Highlight option in article screen.</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Bottom links work fine. Need to add style to change the color of the footer.</td>
-                <td class="vx">Version 2</td>
-                <td></td>
-            </tr>
-        </table>
-
-        <div class="staff noman">
-            <h3>Noman</h3>
-        </div>
-        <table class="staff_table">
-            <tr class="head staff_head">
-                <td>No.</td>
-                <td>Issue</td>
-                <td>Status</td>
-                <td>Comment (by Adnan)</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>I have added Articles from all three major browsers and tested Video, Photo gallery, polls, Highlights and preview section and there headings. i. Uploaded new ad by clicking "+" sign updated fine. ii. First time below error seen when clicked
-                    on "Update" and saved for Ad in adgroup14 beside Logo.
-
-                    <red>ADODB.Stream error '800a0bbc' Write to file failed. /generalsubs2.asp, line 1641</red>
-
-                    iii. Second time no error seen but new ad added instead of update</td>
-                <td class="none">Meeting</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>After making any changes to menu or any other section, editor page refreshed but "Add, edit and delete" are seen after few seconds till then Home page editor behaves like actual home page.</td>
-                <td class="fx">FIXED</td>
-                <td>After making changes, site gets hard reload and it took time to load new cache files. In first update, I have set loader for 10-15 seconds so that we can directly see editor on any blocks. Later, I have removed it as its not good to see
-                    loader for everytime. I will set opacity in next update.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Added 2 submenu under "MenuNoman" and i tried to create 3rd submenu using "+" sign under submenus. I keep getting edit screen. Do not see blank add screen.</td>
-                <td class="none">Meeting</td>
-                <td>We didn't face such issue. Make sure that you have clicked on plus icon.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>"Visit Menu" link icon under "HOME" menu icon is not working.</td>
-                <td class="px">PENDING</td>
-                <td>{{Home}} command issue for folder site, Sir will fix that. This will not happen on live site.</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Preview section at the bottom do not having particular submenu bydefault selected. If we click add on "Tech" submenu preview section. We have to manually select that submenu.</td>
-                <td class="px">PENDING</td>
-                <td>This was issue of "Previews", it is not showing updated Menu and Submenu name. It shows "NEWS 2" as menu and "TECH" as sub-menu. But, both are already renamed by staff. Need to fix this issue from Sir side.</td>
-            </tr>
-        </table>
-    </div>
 </body>
 
 </html>
