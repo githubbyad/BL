@@ -1,0 +1,102 @@
+{{LayoutArticleGroup666Begin}}
+{{LayoutArticleGroup666Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartcheckout.htm}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="{{PutDomain}}lib/bl.js"></script>
+<script type="text/javascript" src="{{PutDomain}}lib//JQuery/jquery.js"></script>
+<script type="text/javascript" src="{{PutDomain}}customform.js?v=9.000009"></script>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+</head>
+<body class="checkout-body">
+<div class="pro-loader"></div>
+<div class="checkout-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Checkout</span></div>
+<div class="checkout-left">
+<div class="checkout-load"><ol></ol></div>
+</div>
+<div class="checkout-label checkout-shipping-div"><span>Shipping</span></div>
+<div class="checkout-choose">
+<div class="shipping-divx">Choose Shipping Method: </div>
+</div>
+<div class="checkout-label"><span>Price Details</span></div>
+<div class="checkout-right">
+<div class="checkout-price">
+<div class="checkout-total"><span>Price (<b>1</b> items): </span><div class="pright"><div></div><p>0.00</p></div></div>
+<div class="checkout-shipping"><span>Shipping: </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-tax"><span>Sales Tax (<div class="salex"></div>): </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-sfee"><span>Service Fee: </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-total-amount"><span>Total Amount: </span><div class="pright"><b></b><p>0.00</p></div></div>
+</div>
+</div>
+<div class="checkout-button"><span><a href="javascript:void(0);" onclick="location.replace('{{PutDomain}}cartorder.htm');">Next</a></span></div>
+</div>
+<div class="checkout-empty" style="display:none;">
+<div class="ce-text"><img src="/lib/images/trash2.png"><span>Your Cart is Empty!</span><br><span class="product-back" onclick="window.location.replace(readCookie('product_page'));">Go Back</span></div>
+</div>
+<span style="display:none;" id="hcdiv" name="hcdiv" class="hcdiv"><script type="text/javascript" language="JavaScript">LoadDoc("{{PutDomain}}shipping.htm", "hcdiv", "");</script></span>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup666End}}
+
+
+{{LayoutArticleGroup667Begin}}
+{{LayoutArticleGroup667Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartorder.htm}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="{{PutDomain}}lib/bl.js"></script>
+<script type="text/javascript" src="{{PutDomain}}lib//JQuery/jquery.js"></script>
+<script type="text/javascript" src="{{PutDomain}}customform.js?v=9.000009"></script>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+</head>
+<body class="order-body">
+<div class="pro-loader"></div>
+<div class="order-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Order Summary</span></div>
+<form class="OrderForm" style="width:880px;" method="POST" action="#" id="OrderForm" name="OrderForm">
+<fieldset class="order-fieldset">
+<section>
+<div class="order-row order-text">
+<label class="order-label">Items</label>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Amount (<b></b>)</label>
+<input class="order-input" id="item_amount" name="item_amount" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Shipping Method</label>
+<input class="order-input" id="item_shipping" name="item_shipping" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label">Choose Payment</label>
+<select id="payment" name="payment" required><option>Credit Card</option><option>PayPal</option></select>
+</div>
+</section>
+<footer class="order-footer">
+<input style="display:none;" type="submit" value="Order Now" id="OrderSubmit" name="OrderSubmit" class="order-button">
+<a class="OrderFormx" href="javascript:void(0);">Place Order</a>
+</footer>
+</fieldset>
+<div class="productx-ssl"><img alt="SSL Security" src="/lib/images/ssl_security.jpg" width="100"></div>
+</form>
+</div>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup667End}}
