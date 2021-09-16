@@ -1,0 +1,214 @@
+{{LayoutProductPage1Begin}}
+{{LayoutProductPage1Limit100}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="product1-container">
+<div class="product1-bar">
+<div class="product1-label"><more class="hpe-in-submenu-only" data-menu="<<MenuId>>" data-submenu="<<SubMenuId>>">{{SubMenu}}</more></div>
+<div class="product-cartx">
+<div title="View Cart" class="product1-cart-count"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="pc-count"></span></a></div>
+<div class="product-cart-items" style="display:none;">
+<ol id="list-item"></ol>
+<div class="total-text"><p>Total: </p><p id="total-price" class="productx-total-price">{{Currency}}<span>0.00</span></p></div>
+<div class="product-checkout-link"><a href="cartcheckout.htm">Checkout</a></div>
+</div>
+<div class="product1-empty" style="display:none;">
+<span>Your cart is empty</span>
+<button class="product1-continue">Continue shopping</button>
+</div>
+</div>
+</div>
+<div style="display:none;" class="productx-currency">{{Currency}}</div>
+<div class="product1-wrap">
+{{RepeatBegin}}
+<div class="product1-category" data-caterepeat="{{CategoryNoRepeat}}"><span><more class="hpe-in-product-category" data-category-id="924">{{CategoryNoRepeat}}</more></span></div>
+<div class="product1-list hpe-in-product" name="{{SalePrice}}" data-product="{{ProductId}}" data-submenu="{{SubMenu}}" data-category="{{Category}}">
+<div class="product1-box">
+<div class="product1-box1"><a href="/product-<<CategoryFile>>-{{ProductId}}-<<SubMenuId>>.htm"><img src="{{PutDomain}}{{Picture1}}"><span class="product1-quick"><i class="fa fa-location-arrow" aria-hidden="true"></i> Details</span></a></div>
+<div class="product1-box2">
+<div class="product1-name">{{ProductName}}</div>
+<div class="product1-price">
+<div class="product1-sale-price" name="{{SalePrice}}">
+<div class="product1-sign">{{Currency}}</div>
+<div class="product1-sale">{{SalePrice}}</div>
+</div>
+<div class="product1-regular-price" name="{{RegularPrice}}">
+<div class="product1-sign">{{Currency}}</div>
+<div class="product1-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product1-discount"><span></span>% off</div>
+</div>
+</div>
+</div>
+<div class="product1-cart">
+<a class="pc-cart" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}" data-sfee="{{ServiceFee}}" data-sdesc="{{ServiceDescription}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart" style="display:none;" href="{{URL}}/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+<div class="product1-footer"></div>
+</div>
+{{LayoutProductPage1End}} 
+
+
+{{LayoutProductPage2Begin}}
+{{LayoutProductPage2Limit1}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeCategory:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+test 1
+{{RepeatBegin}}
+test 2
+Unique ID: {{ProductId}} <br>
+URL: {{URL}}/product<<ProductId>>.htm <br>
+Category: {{Category}} <br>
+Code: {{ProductCode}} <br>
+Name: {{ProductName}} <br>
+UnitOfMeasure: {{UnitOfMeasure}} <br>
+Description: {{Description}} <br>
+RegularPrice: {{RegularPrice}} <br>
+SalePrice: {{SalePrice}} <br>
+Picture1: {{Picture1}} <br>
+Picture2: {{Picture2}} <br>
+Order: {{Order}} <br>
+Weight: {{Weight}} <br>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutProductPage2End}} 
+
+
+{{LayoutProductPage3Begin}}
+{{LayoutProductPage3Limit1}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeDetailId:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="product2-body">
+<div class="product2-div">
+<div class="product1-bar">
+<div class="product1-label"><more class="hpe-in-submenu-only" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}">{{SubMenu}}</more></div>
+<div class="product-cartx">
+<div title="View Cart" class="product1-cart-count"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="pc-count"></span></a></div>
+<div class="product-cart-items" style="display:none;">
+<ol id="list-item"></ol>
+<div class="total-text"><p>Total: </p><p id="total-price" class="productx-total-price">{{Currency}}<span>0.00</span></p></div>
+<div class="product-checkout-link"><a href="cartcheckout.htm">Checkout</a></div>
+</div>
+<div class="product1-empty" style="display:none;">
+<span>Your cart is empty</span>
+<button class="product1-continue">Continue shopping</button>
+</div>
+</div>
+</div>
+</div>
+<div style="display:none;" class="productx-currency">{{Currency}}</div>
+{{RepeatBegin}}
+<div class="product2-container">
+<span class="product2-category" style="display: none;">{{CategoryNoRepeat}}</span>
+<div class="product2-name" name="{{ProductName}}">{{ProductName}}</div>
+<script>document.title = "{{ProductName}}";</script>
+<div class="product2-left">
+<div class="product2-image">
+<div class="product2-image-big">
+<span id="p2img1"><img src="{{Picture1}}" onclick="OpenPopup2('{{Picture1}}','image')"></span>
+<span id="p2img2" style="display:none;"><img src="{{Picture2}}" onclick="OpenPopup2('{{Picture2}}','image')"></span>
+</div>
+<div class="product2-image-small">
+<span class="p2img1 p2active"><img src="{{Picture1}}"></span>
+<span class="p2img2"><img src="{{Picture2}}"></span>
+</div>
+</div>
+</div>
+<div class="product2-right">
+<div class="product2-price" name="{{SalePrice}}">
+<div class="product2-sale-price" name="{{SalePrice}}">
+<div class="product2-sign">{{Currency}}</div>
+<div class="product2-sale">{{SalePrice}}</div>
+</div>
+<div class="product2-regular-price" name="{{RegularPrice}}">
+<div class="product2-sign">{{Currency}}</div>
+<div class="product2-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product2-discount"><span></span>% off</div>
+</div>
+<div class="product1-cart">
+<a class="pc-cart" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}" data-sfee="{{ServiceFee}}" data-sdesc="{{ServiceDescription}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart" style="display:none;" href="/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+<div class="product2-border">
+<div class="product2-box">
+<div class="product2-head">Specifications</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Product Description</div>
+<div class="product2-value">{{Description}}</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Weight</div>
+<div class="product2-value">{{Weight}} lbs</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Unit Of Measure</div>
+<div class="product2-value">{{UnitOfMeasure}}</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Product Code</div>
+<div class="product2-value">{{ProductCode}}</div>
+</div>
+</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+{{LayoutProductPage3End}} 
+
+
+{{LayoutProductPage4Begin}}
+{{LayoutProductPage4Limit50}}
+{{Where:GroupInclude:1}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-group1.htm}}
+<div class="g1-container">
+<div class="g1-label">Most Popular Products</div>
+<div class="g1-wrap">
+{{RepeatBegin}}
+<div class="product1-list g1-list" name="{{SalePrice}}">
+<div class="product1-box g1-box">
+<div class="product1-box1 g1-box1"><a href="/product-<<CategoryFile>>-{{ProductId}}-<<SubMenuId>>.htm"><img src="{{PutDomain}}{{Picture1}}"><span class="product1-quick"><i class="fa fa-location-arrow" aria-hidden="true"></i> Details</span></a></div>
+<div class="product1-box2 g1-box2">
+<div class="g1-category"><span>{{Category}}</span></div>
+<div class="product1-name g1-name">{{ProductName}}</div>
+<div class="product1-price g1-price">
+<div class="product1-sale-price g1-sale-price" name="{{SalePrice}}">
+<div class="product1-sign g1-sign">{{Currency}}</div>
+<div class="product1-sale g1-sale">{{SalePrice}}</div>
+</div>
+<div class="product1-regular-price g1-regular-price" name="{{RegularPrice}}">
+<div class="product1-sign g1-sign">{{Currency}}</div>
+<div class="product1-reg g1-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product1-discount g1-discount"><span></span>% off</div>
+</div>
+</div>
+</div>
+<div class="product1-cart g1-cart">
+<a class="pc-cart g1-pc-cart" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight g1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart g1-go-to-cart" style="display:none;" href="/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification g1-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>
+{{LayoutProductPage4End}} 
