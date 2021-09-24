@@ -1,0 +1,460 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<div class="mobile-container"  style="display:none;">
+<div class="mobile-wrap">
+<span class="menu-mobile-label">Menu</span>
+<span class="icon-menu-bars">
+<span class="bar-1"></span>
+<span class="bar-2"></span>
+<span class="bar-3"></span>
+</span>
+</div>
+<div class="mobile-search"><a href="JavaScript:Void(0);" class="search-link"><i class="fa fa-search" aria-hidden="true"></i>SEARCH</a></div>
+</div>
+<div class="column6">
+{{RepeatBegin1}}
+<div class="menubodyhorizontal active has-sub custom_menu_{{MenuId}} hp-menu" data-menu="{{MenuId}}">
+<div class="hpe-in-menu" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}">
+<a href="{{MenuLink}}" style="{{MenuStyle}}">{{Menu}} <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+
+
+</div>
+<div class="SubMenuContainer1 hp-submenu" data-menu="{{MenuId}}">
+{{RepeatBegin2}}
+<div class="submenubodyhorizontal custom_Submenu_{{SubMenuId}} hpe-in-submenu" style="{{CSSDisplay}}" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link={{SubMenuLink}} data-order="{{SubMenuOrder}}">
+<a name="S_{{SubMenuId}}_S" href={{SubMenuLink}} {{Target}} {{GoogleTracker}} style="{{SubMenuMouseInOutColor}} {{SubMenuStyle}}" >{{SubMenu}}</a>
+
+</div>
+{{RepeatEnd2}}
+</div>
+</div>
+{{RepeatEnd1}}
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+
+{{LayoutH1Begin}}
+{{LayoutH1Limit7}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+{{BlankValue-TotalArticles}}
+function GetHighlights1(){document.write('
+<div class="H1-wrap" id="Highlight1">
+<div class="H1-label block-label"><span class="hpe-custom-text-1"><script type="text/javascript">Section1();<\/script></span></div>
+<div class="hp-parent">
+{{RepeatBegin}}
+<div class="H1-container hpe-in-hl1" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<a href="{{HeadingLink}}"><div class="H1-heading">{{Heading}}</div></a>
+<div class="H1-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+<div class="H1-body">{{Body}}</div>
+<div class="H1-more"><a href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>
+');}
+{{LayoutH1End}}
+
+
+
+{{LayoutH2Begin}}
+{{LayoutH2Limit8}}
+{{SortBy:Issue,Updated}}
+{{BlankValue-TotalArticles}}
+function GetHighlights2(){document.write('
+<div class="H2-wrap" id="Highlight2">
+<div class="H2-label block-label"><span class="hpe-custom-text-3"><script type="text/javascript">Section3();<\/script></span></div>
+<div class="hp-parent">
+{{RepeatBegin}}
+<div class="H2-container hpe-in-hl2" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H2-image flex-img"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" /></a></div>
+<div class="H2-right">
+<div class="H2-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H2-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>
+');}
+{{LayoutH2End}}
+
+
+{{LayoutH4Begin}}
+{{LayoutH4Limit40}}
+{{SortBy:Issue, Updated}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+function GetHighlights4(){document.write('<div id="H4" style="display:none;">
+<div class="H4-label block-label"><span class="hpe-custom-text-2"><script type="text/javascript">Section2();<\/script></span></div>
+<div class="hp-parent">
+{{RepeatBegin}}
+{{If Counter < 2}}
+<div class="H4 uncommentbig hp-parent-div1 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H4-big-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-big-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+
+<div class="H4-big-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+{{ElseIf Counter < 10}}
+<div class="H4 uncomment1 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+</div>
+{{ElseIf Counter < 16}}
+<div class="H4 uncomment2 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<!--<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>-->
+</div>
+{{ElseIf Counter < 22}}
+<div class="H4 uncomment3 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<!--<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>-->
+</div>
+{{ElseIf Counter < 28}}
+<div class="H4 uncomment4 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<!--<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>-->
+</div>
+{{ElseIf Counter < 34}}
+<div class="H4 uncomment5 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<!--<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>-->
+</div>
+{{Else}}
+<div class="H4 uncomment6 hpe-in-hl4" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<!--<div class="H4-img"><a class="art-link" href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="H4-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H4-slide">
+<div class="H4-heading"><a class="art-link" href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H4-issue_date"><i class="fa fa-calendar" aria-hidden="true"></i> {{MonthI3}} {{DayI}}, {{YearI}}</div>
+<div class="H4-body">{{Body}}</div>
+<div class="H4-more"><a class="art-link" href="{{HeadingLink}}">{{more}}</a></div>
+</div>-->
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+<div class="load_more"><span><more class="hpe-custom-text-8"><script type="text/javascript">Section8();<\/script></more> <i class="fa fa-angle-down" aria-hidden="true"></i></span></div>
+</div>');DisplayHighlight('H4');}
+{{LayoutH4End}}
+
+
+{{LayoutH5Begin}}
+{{LayoutH5Limit6}}
+{{SortBy:Issue,Updated}}
+{{RemoveMore:Yes}}
+{{BlankValue-TotalArticles}}
+function GetHighlights5(){document.write('
+<div class="H5-wrap hp-parent" id="Highlight5" style="display:none;">
+{{RepeatBegin}}
+{{If Counter < 2}}
+<div class="H5-container H5-big hp-parent-div1 hpe-in-hl5" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H5-image H5-big-image flex-img"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" /></a></div>
+<div class="H5-submenu H5-big-sub-menu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H5-bottom H5-big-bottom">
+<div class="H5-heading H5-big-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H5-date H5-big-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+<div class="H5-body H5-big-body">{{Body}}</div>
+<div class="H5-more H5-big-more"><a href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+</div>
+{{ElseIf Counter < 4}}
+<div class="H5-container H5-b-2 hpe-in-hl5" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H5-image H5-mid-image flex-img"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" /></a></div>
+<div class="H5-submenu H5-mid-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H5-bottom H5-mid-bottom">
+<div class="H5-heading H5-mid-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H5-date H5-mid-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+<div class="H5-body H5-mid-body">{{Body}}</div>
+<div class="H5-more H5-mid-more"><a href="{{HeadingLink}}">{{more}}</a></div>
+</div>
+</div>
+{{Else}}
+<div class="H5-container H5-b-3 hpe-in-hl5" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="H5-image H5-small-image flex-img"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="img-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" /></a></div>
+<div class="H5-submenu H5-small-submenu"><a href="{{SubMenuLink}}">{{SubMenu}}</a></div>
+<div class="H5-bottom H5-small-bottom">
+<div class="H5-heading H5-small-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="H5-date H5-small-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}</div>
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+');DisplayHighlight('Highlight5');}
+{{LayoutH5End}}
+
+{{LayoutArticleGroup113Begin}}
+{{LayoutArticleGroup113Limit10}}
+{{Where:SubMenuIdInclude:113}}
+{{SortBy:Issue,Updated}}
+function GetArticleGroup113(){document.write({{PutHtmlChar39}}
+<div class="event-section-container">
+<div class="event-menu">EVENTZILLA</div>
+<div class="event-line"></div>
+{{RepeatBegin}}
+<div class="event-section-block hpe-in-event" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="event-section-image"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="event-section-heading"><a href="{{HeadingLink}}"><h2 class="pageheading">{{Heading}}</h2></a></div>
+<div class="event-section-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{IssueDate}}</div>
+<div class="event-section-body pagebody">{{Body}}</div>
+</div>	
+{{RepeatEnd}}
+</div>{{PutHtmlChar39}});}
+{{LayoutArticleGroup113End}}
+
+
+{{LayoutArticleGroup666Begin}}
+{{LayoutArticleGroup666Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartcheckout.htm}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="{{PutDomain}}lib/bl.js"></script>
+<script type="text/javascript" src="{{PutDomain}}lib//JQuery/jquery.js"></script>
+<script type="text/javascript" src="{{PutDomain}}customform.js?v=9.000009"></script>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+</head>
+<body class="checkout-body">
+<div class="pro-loader"></div>
+<div class="checkout-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Checkout</span></div>
+<div class="checkout-left">
+<div class="checkout-load"><ol></ol></div>
+</div>
+<div class="checkout-label checkout-shipping-div"><span>Shipping</span></div>
+<div class="checkout-choose">
+<div class="shipping-divx">Choose Shipping Method: </div>
+</div>
+<div class="checkout-label"><span>Price Details</span></div>
+<div class="checkout-right">
+<div class="checkout-price">
+<div class="checkout-total"><span>Price (<b>1</b> items): </span><div class="pright"><div></div><p>0.00</p></div></div>
+<div class="checkout-shipping"><span>Shipping: </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-tax"><span>Sales Tax (<div class="salex"></div>): </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-sfee"><span>Service Fee: </span><div class="pright"><b></b><p>0.00</p></div></div>
+<div class="checkout-total-amount"><span>Total Amount: </span><div class="pright"><b></b><p>0.00</p></div></div>
+</div>
+</div>
+<div class="checkout-button"><span><a href="javascript:void(0);" onclick="location.replace('{{PutDomain}}cartorder.htm');">Next</a></span></div>
+</div>
+<div class="checkout-empty" style="display:none;">
+<div class="ce-text"><img src="/lib/images/trash2.png"><span>Your Cart is Empty!</span><br><span class="product-back" onclick="window.location.replace(readCookie('product_page'));">Go Back</span></div>
+</div>
+<span style="display:none;" id="hcdiv" name="hcdiv" class="hcdiv"><script type="text/javascript" language="JavaScript">LoadDoc("{{PutDomain}}shipping.htm", "hcdiv", "");</script></span>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup666End}}
+
+
+{{LayoutArticleGroup667Begin}}
+{{LayoutArticleGroup667Limit1}}
+{{SortBy:Issue,Updated}}
+{{File:cartorder.htm}}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="{{PutDomain}}lib/bl.js"></script>
+<script type="text/javascript" src="{{PutDomain}}lib//JQuery/jquery.js"></script>
+<script type="text/javascript" src="{{PutDomain}}customform.js?v=9.000009"></script>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+</head>
+<body class="order-body">
+<div class="pro-loader"></div>
+<div class="order-container" style="visibility:hidden;opacity:0;">
+<div class="checkout-label"><span>Order Summary</span></div>
+<form class="OrderForm" style="width:880px;" method="POST" action="#" id="OrderForm" name="OrderForm">
+<fieldset class="order-fieldset">
+<section>
+<div class="order-row order-text">
+<label class="order-label">Items</label>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Amount (<b></b>)</label>
+<input class="order-input" id="item_amount" name="item_amount" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label order-currency">Shipping Method</label>
+<input class="order-input" id="item_shipping" name="item_shipping" size="50" maxlength="1000" type="Text" value="" disabled>
+</div>
+</section>
+<section>
+<div class="order-row">
+<label class="order-label">Choose Payment</label>
+<select id="payment" name="payment" required><option>Credit Card</option><option>PayPal</option></select>
+</div>
+</section>
+<footer class="order-footer">
+<input style="display:none;" type="submit" value="Order Now" id="OrderSubmit" name="OrderSubmit" class="order-button">
+<a class="OrderFormx" href="javascript:void(0);">Place Order</a>
+</footer>
+</fieldset>
+<div class="productx-ssl"><img alt="SSL Security" src="/lib/images/ssl_security.jpg" width="100"></div>
+</form>
+</div>
+{{RepeatBegin}}
+<div style="display:none;"></div>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutArticleGroup667End}}
+
+{{LayoutArticleGroup12Begin}}
+{{LayoutArticleGroup12Limit20}}
+{{SortBy:Issue,Updated}}
+{{MakeMobileLinks:Yes}}
+{{BlankValue-Image1:blank.gif}}
+function GetMobileArticles(){document.write({{PutHtmlChar39}}<div width="100%" class="m_maincontent">
+<div class="m-article-cont_12">
+<div class="mm-menu2">
+<div class="m-submenu_div_12"><h1 class="pageheading MobileSubMenu">Latest Headlines</h1></div>
+</div>
+{{RepeatBegin}}
+<div class="m-articles_div_12">
+{{If Picture1=blank.gif}}
+<div class="m-heading_div_12" style="width: 100%; height:auto;";>
+<a href="{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}" onclick="return OpenLoginPopupM(this.href);" class="m-heading_a_12"><h1 class="pageheading m-heading_h1_12">{{Heading}}</h1></a>
+</div>
+{{Else}}
+{{<div class="m-image_div_12 MobileTDBGcolor"><a href="{{HeadingLink}}" onclick="return OpenLoginPopupM(this.href);"><img src=":Picture1:" /></a></div>}}
+<div class="m-heading_div_12">
+<a href="{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}" onclick="return OpenLoginPopupM(this.href);" class="m-heading_a_12"><h1 class="pageheading m-heading_h1_12">{{Heading}}</h1></a>
+</div>
+{{EndIf}}
+<div id="mv-rular" style="border-bottom: 1px dotted #C2C2C2;"></div>
+</div>
+{{RepeatEnd}}
+</div>{{PutHtmlChar39}});}
+{{LayoutArticleGroup12End}}
+
+{{LayoutArticleGroup600Begin}}
+{{LayoutArticleGroup600Limit50}}
+{{File:sitemap.xml}}
+{{ReplaceJavascriptChars:No}}
+{{Find&ReplaceString:&,and}}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{{RepeatBegin}}
+<url>
+<loc>{{HeadingLink}}</loc>
+<news:news>
+<news:publication>
+<news:name>Sacobaynews</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>{{YearI}}-{{MonthI}}-{{DayI}}</news:publication_date>
+<news:title>{{Heading}}</news:title>
+<news:keywords>{{Heading}}</news:keywords>
+</news:news>
+</url>
+{{RepeatEnd}}
+</urlset>
+{{LayoutArticleGroup600End}}
+
+{{LayoutArticleGroup100Begin}}
+{{LayoutArticleGroup100Limit12}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+{{SortBy:Issue,Updated}}
+function GetArticleGroup100(){document.write({{PutHtmlChar39}}
+<div id="ARG100" class="main_contenir_ARG100 hp-parent"> 
+{{RepeatBegin}}
+{{If Counter<6}}
+<div class="span1_ARG100 hpe-in-artgroup" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div  class="span1_heading_ARG100"> <a href="{{HeadingLink}}"  class="heading_preview_ARG100">{{Heading}}</a> </div>
+<div class="span1_img_ARG100 flex"><a href="{{HeadingLink}}"><img u="image" src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class=""></a> </div>
+<div class="Sub_menu_ARG100"><a href="{{HeadingLink}}"  class="heading_preview_ARG100">{{SubMenu}}</a></div>
+<div  class="body_preview_ARG100">  {{Body}}</div>
+<div class="Read_more_100"> <a href="{{HeadingLink}}" class="Read_more hvr-icon-wobble-horizontal">{{more}} <i class="fa fa-angle-double-right"></i>
+</a></div>
+<div style="clear:both;"> </div>
+</div>
+{{Else}}
+<div id="archive_ARG100" class="hpe-in-artgroup" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}" data-block="d-block f-left">
+<div id="archive_heading_ARG100">
+<div class="archive_IssueDate_ARG100">
+<div class="day">{{DayU1}}</div>
+<div class="mon">{{MonthU2}}</div>
+<div class="year">{{YearU}}</div>
+</div>
+<a href="{{HeadingLink}}" class="archive_heading_ARG100">{{Heading}}</a> 
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+{{PutHtmlChar39}}); DisplayHighlight('ARG100');}
+{{LayoutArticleGroup100End}}
+
+
+
+{{LayoutMenus2Begin}}
+{{File:menu_horizontal2.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu2(){document.write({{PutHtmlChar39}}
+<div class="column6x">
+{{RepeatBegin1}}
+<div class="menubodyhorizontalx">
+<div class="hxpe-in-menu">
+<a href="{{MenuLink}}" style="{{MenuStyle}}">{{Menu}}</a>
+</div>
+<div class="SubMenuContainer1x">
+{{RepeatBegin2}}
+<div class="submenubodyhorizontalx" style="{{CSSDisplay}}">
+<a href={{SubMenuLink}} {{Target}} {{GoogleTracker}} style="{{SubMenuMouseInOutColor}} {{SubMenuStyle}}"><b>· </b>{{SubMenu}}</a>
+</div>
+{{RepeatEnd2}}
+</div>
+</div>
+{{RepeatEnd1}}
+</div>
+{{PutHtmlChar39}});}
+{{LayoutMenus2End}}
