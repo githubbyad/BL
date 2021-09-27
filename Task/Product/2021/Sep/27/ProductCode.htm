@@ -1,0 +1,663 @@
+{{LayoutProductPage1Begin}}
+{{LayoutProductPage1Limit100}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="product1-container">
+<div class="product1-bar">
+<div class="product1-label"><more class="hpe-in-submenu-only" data-menu="<<MenuId>>" data-submenu="<<SubMenuId>>">{{SubMenu}}</more></div>
+<div class="product-cartx">
+<div title="View Cart" class="product1-cart-count"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="pc-count"></span></a></div>
+<div class="product-cart-items" style="display:none;">
+<ol id="list-item"></ol>
+<div class="total-text"><p>Total: </p><p id="total-price" class="productx-total-price">{{Currency}}<span>0.00</span></p></div>
+<div class="product-checkout-link"><a href="cartcheckout.htm">Checkout</a></div>
+</div>
+<div class="product1-empty" style="display:none;">
+<span>Your cart is empty</span>
+<button class="product1-continue">Continue shopping</button>
+</div>
+</div>
+</div>
+<div style="display:none;" class="productx-currency">{{Currency}}</div>
+<div class="product1-wrap">
+{{RepeatBegin}}
+<div class="product1-category" data-caterepeat="{{CategoryNoRepeat}}"><span><more class="hpe-in-product-category" data-category-id="924">{{CategoryNoRepeat}}</more></span></div>
+<div class="product1-list hpe-in-product" name="{{SalePrice}}" data-product="{{ProductId}}" data-submenu="{{SubMenu}}" data-category="{{Category}}">
+<div class="product1-box">
+<div class="product1-box1"><a href="/product-<<CategoryFile>>-{{ProductId}}-<<SubMenuId>>.htm"><img src="{{PutDomain}}{{Picture1}}"><span class="product1-quick"><i class="fa fa-location-arrow" aria-hidden="true"></i> Details</span></a></div>
+<div class="product1-box2">
+<div class="product1-name">{{ProductName}}</div>
+<div class="product1-price">
+<div class="product1-sale-price" name="{{SalePrice}}">
+<div class="product1-sign">{{Currency}}</div>
+<div class="product1-sale">{{SalePrice}}</div>
+</div>
+<div class="product1-regular-price" name="{{RegularPrice}}">
+<div class="product1-sign">{{Currency}}</div>
+<div class="product1-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product1-discount"><span></span>% off</div>
+</div>
+</div>
+</div>
+<div class="product1-cart">
+<a class="pc-cart pc-cartx" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}" data-sfee="{{ServiceFee}}" data-sdesc="{{ServiceDescription}}" data-discount="{{Discount}}" data-discount-table="{{DiscountTable}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart" style="display:none;" href="{{URL}}/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+<div class="product1-footer"></div>
+</div>
+{{LayoutProductPage1End}} 
+
+
+{{LayoutProductPage2Begin}}
+{{LayoutProductPage2Limit1}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeCategory:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+test 1
+{{RepeatBegin}}
+test 2
+Unique ID: {{ProductId}} <br>
+URL: {{URL}}/product<<ProductId>>.htm <br>
+Category: {{Category}} <br>
+Code: {{ProductCode}} <br>
+Name: {{ProductName}} <br>
+UnitOfMeasure: {{UnitOfMeasure}} <br>
+Description: {{Description}} <br>
+RegularPrice: {{RegularPrice}} <br>
+SalePrice: {{SalePrice}} <br>
+Picture1: {{Picture1}} <br>
+Picture2: {{Picture2}} <br>
+Order: {{Order}} <br>
+Weight: {{Weight}} <br>
+{{RepeatEnd}}
+</body>
+</html>
+{{LayoutProductPage2End}} 
+
+
+{{LayoutProductPage3Begin}}
+{{LayoutProductPage3Limit1}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeDetailId:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="product2-body">
+<div class="product2-div">
+<div class="product1-bar">
+<div class="product1-label"><more class="hpe-in-submenu-only" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}">{{SubMenu}}</more></div>
+<div class="product-cartx">
+<div title="View Cart" class="product1-cart-count"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="pc-count"></span></a></div>
+<div class="product-cart-items" style="display:none;">
+<ol id="list-item"></ol>
+<div class="total-text"><p>Total: </p><p id="total-price" class="productx-total-price">{{Currency}}<span>0.00</span></p></div>
+<div class="product-checkout-link"><a href="cartcheckout.htm">Checkout</a></div>
+</div>
+<div class="product1-empty" style="display:none;">
+<span>Your cart is empty</span>
+<button class="product1-continue">Continue shopping</button>
+</div>
+</div>
+</div>
+</div>
+<div style="display:none;" class="productx-currency">{{Currency}}</div>
+{{RepeatBegin}}
+<div class="product2-container">
+<span class="product2-category" style="display: none;">{{CategoryNoRepeat}}</span>
+<div class="product2-name" name="{{ProductName}}">{{ProductName}}</div>
+<script>document.title = "{{ProductName}}";</script>
+<div class="product2-left">
+<div class="product2-image">
+<div class="product2-image-big">
+<span id="p2img1"><img src="{{Picture1}}" onclick="OpenPopup2('{{Picture1}}','image')"></span>
+<span id="p2img2" style="display:none;"><img src="{{Picture2}}" onclick="OpenPopup2('{{Picture2}}','image')"></span>
+</div>
+<div class="product2-image-small">
+<span class="p2img1 p2active"><img src="{{Picture1}}"></span>
+<span class="p2img2"><img src="{{Picture2}}"></span>
+</div>
+</div>
+</div>
+<div class="product2-right">
+<div class="product2-price" name="{{SalePrice}}">
+<div class="product2-sale-price" name="{{SalePrice}}">
+<div class="product2-sign">{{Currency}}</div>
+<div class="product2-sale">{{SalePrice}}</div>
+</div>
+<div class="product2-regular-price" name="{{RegularPrice}}">
+<div class="product2-sign">{{Currency}}</div>
+<div class="product2-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product2-discount"><span></span>% off</div>
+</div>
+<div class="product2-discount-table" data-discount2="{{Discount}}">
+<div class="product2-discount-head">Quantity  Discounts</div>
+<div class="product2-discount-table-inner">{{DiscountTable}}</div>
+</div>
+<div class="product1-cart">
+<a class="pc-cart pc-cartx" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}" data-sfee="{{ServiceFee}}" data-sdesc="{{ServiceDescription}}" data-discount="{{Discount}}" data-discount-table="{{DiscountTable}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart" style="display:none;" href="/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+<div class="product2-border">
+<div class="product2-box">
+<div class="product2-head">Specifications</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Product Description</div>
+<div class="product2-value">{{Description}}</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Weight</div>
+<div class="product2-value">{{Weight}} lbs</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Unit Of Measure</div>
+<div class="product2-value">{{UnitOfMeasure}}</div>
+</div>
+<div class="product2-box">
+<div class="product2-label">Product Code</div>
+<div class="product2-value">{{ProductCode}}</div>
+</div>
+</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+{{LayoutProductPage3End}} 
+
+
+{{LayoutProductPage4Begin}}
+{{LayoutProductPage4Limit50}}
+{{Where:GroupInclude:1}}
+{{ReplaceJavascriptChars:No}}
+{{File:product-group1.htm}}
+<div class="g1-container">
+<div class="g1-label">Most Popular Products</div>
+<div class="g1-wrap">
+{{RepeatBegin}}
+<div class="product1-list g1-list" name="{{SalePrice}}">
+<div class="product1-box g1-box">
+<div class="product1-box1 g1-box1"><a href="/product-<<CategoryFile>>-{{ProductId}}-<<SubMenuId>>.htm"><img src="{{PutDomain}}{{Picture1}}"><span class="product1-quick"><i class="fa fa-location-arrow" aria-hidden="true"></i> Details</span></a></div>
+<div class="product1-box2 g1-box2">
+<div class="g1-category"><span>{{Category}}</span></div>
+<div class="product1-name g1-name">{{ProductName}}</div>
+<div class="product1-price g1-price">
+<div class="product1-sale-price g1-sale-price" name="{{SalePrice}}">
+<div class="product1-sign g1-sign">{{Currency}}</div>
+<div class="product1-sale g1-sale">{{SalePrice}}</div>
+</div>
+<div class="product1-regular-price g1-regular-price" name="{{RegularPrice}}">
+<div class="product1-sign g1-sign">{{Currency}}</div>
+<div class="product1-reg g1-reg"><s>{{RegularPrice}}</s></div>
+</div>
+<div class="product1-discount g1-discount"><span></span>% off</div>
+</div>
+</div>
+</div>
+<div class="product1-cart g1-cart">
+<a class="pc-cart g1-pc-cart pc-cartx" href="javascript:void(0);" value="{{SalePrice}}" data-name="{{RegularPrice}}" alt="{{Currency}}" data="{{PutDomain}}{{Picture1}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart<p style="display:none;">{{ProductName}}</p><b style="display:none;"></b></a>
+<div class="product1-weight g1-weight" style="display:none;">{{Weight}}</div>
+<a class="pc-go-to-cart g1-go-to-cart" style="display:none;" href="/cartcheckout.htm"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now</a>
+<div class="productx-notification g1-notification"><i class="fa fa-check-circle" aria-hidden="true"></i> Product has been added to your cart.</div>
+</div>
+</div>
+{{RepeatEnd}}
+</div>
+</div>
+{{LayoutProductPage4End}} 
+
+
+{{LayoutDirectoryPage1Begin}}
+{{LayoutDirectoryPage1Limit100}}
+{{ReplaceJavascriptChars:No}}
+{{GroupBy:Category}}
+{{File:directory-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="Directory_heading">
+Browse Categories <span>What kind of category are you looking for?</span>
+</div> 
+<div class="Directory-wrapper-1st-page">
+
+{{RepeatBegin}}
+
+<div class="wrapper1 wrapper-light Directory-space-{{Counter}} ">
+<div class="btn-border-dark">
+<div class="btn-border-dark-inner">
+<div class="Directory-1st-page-holder">
+<div class="Directory-1st-page " ><a href={{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm><more class="hpe-in-directory-category" data-category-id="924">{{CategoryNoRepeat}}</more></a></div>
+<div class="Directory-1st-page-icon hvr-icon-buzz-out"><a href={{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm><i class="fa fa-angle-double-right hvr-icon" aria-hidden="true"></i></a></div>
+<div class="Directory-1st-page-total-Listings hpe-in-directory-list" data-link="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm"><a href={{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm><span>({{TotalGroup}} Listings)</span></a></div>
+</div>
+</div>
+</div>
+</div>
+
+{{RepeatEnd}}
+</div> 
+{{LayoutDirectoryPage1End}} 
+
+
+
+{{LayoutDirectoryPage2Begin}}
+{{LayoutDirectoryPage2Limit100}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeCategory:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:directory-<<CategoryFile>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="Directory-wrapper-2nd-page">
+<div id="content"><aside class="arrow"><more class="hpe-in-directory-category" data-category-id="924"><<Category>></more></aside></div>
+<div class="Directory-2nd-page-space"></div>
+{{RepeatBegin}}
+<!-- {{SubMenu}} -->
+<div class="Directory-holder-2nd-page Directory-space-{{Counter}} hpe-in-directory" data-id="<<DetailID>>" data-submenu="Directory" data-category="{{Category}}">
+<div class="Directory-2nd-page-image-front">
+<a href={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm><img u="image" src="{{PutDomain}}{{Picture}}"  class="Directory-img-2nd-page" style="display: block;"></a>
+</div>
+
+<div class="Directory-2nd-page-list">
+<div class="Directory-2nd-page-lists"><a href={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm>{{Company}}</a></div>
+</div>
+<div class="Directory-list-2nd-page"><span class="list-icons"><i class="fa fa-map-marker" aria-hidden="true"></i></span>{{Address1}}</div>
+<div class="Directory-2nd-page-body">{{Profile}}</div>
+<div class="Directory-2nd-page-footer">
+<div class="icon_share_directory">
+<div><a href="#"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></div>
+<div><a href="#"><a  target="_blank" href="https://twitter.com/intent/tweet?text={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></div>
+<div><a href="#"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm &title=&summary=&source=" style="color:#0177b5;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+
+</div>
+</div>
+<div class="Directory-lists-readmore-"><a href={{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm>More Details.</a></div>
+</div> 
+{{RepeatEnd}}
+</div> 
+{{LayoutDirectoryPage2End}}
+
+
+{{LayoutDirectoryPage3Begin}}
+{{LayoutDirectoryPage3Limit1}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeDetailId:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+
+{{RepeatBegin}}
+<div class="Directory-holder-3rd-page">
+<div class="Directory-3rd-page-image-front">
+<img u="image" src="{{Picture}}"  class="Directory-img-3rd-page" style="display: block;"></a>
+</div>
+</div>
+<div class="Directory-Tab-wrapper">
+<div class="Directory-Tabs">
+<div class="tab">
+<input type="radio" name="css-Directory-Tabs" id="tab-1" checked class="tab-switch">
+<label for="tab-1" class="Directory-tab-label">Information</label>
+<div class="tab-content">
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page Company">{{Company}}</span></span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">First Name:</span>{{FirstName}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Last Name:</span>{{LastName}}</span></span></span></div>
+
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Address:</span>{{Address1}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">City:</span>{{City}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">State:</span>{{State}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Zip:</span>{{Zip}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Country:</span>{{Country}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Phone:</span>{{Phone}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Fax:</span>{{Fax}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Email:</span>{{Email}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Cell:</span>{{Cell}}</span></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Pager:</span>{{Pager}}</span></div>
+<div class="Directory-list-3rd-page social-links"><a href="{{Website}}"><i class="fa fa-globe"></i></a></div>
+<div class="Directory-list-3rd-page social-links"><a href="{{Facebook}}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></div>
+<div class="Directory-list-3rd-page social-links"><a href="{{Twitter}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></div>
+<div class="Directory-list-3rd-page"><span class="list-icons-3rd-page"><span class="info-3rd-page">Coupon:</span>{{Coupon}}</span></div>
+</div>
+</div>
+<div class="tab">
+<input type="radio" name="css-Directory-Tabs" id="tab-2" class="tab-switch">
+<label for="tab-2" class="Directory-tab-label">Details</label>
+<div class="tab-content"><div class="Directory-3rd-page-body"><h1>Profile</h1>{{Profile}}</div></div>
+</div>
+<div class="tab">
+<input type="radio" name="css-Directory-Tabs" id="tab-3" class="tab-switch">
+<label for="tab-3" class="Directory-tab-label">Map</label>
+<div class="tab-content">
+<div class="Directory-3rd-page-body">
+<span class="Directory-3rd-page-map">{{Address1}}</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+{{RepeatEnd}}
+{{LayoutDirectoryPage3End}} 
+ 
+
+
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{ReplaceJavascriptChars:No}}
+{{RemoveHTMLBody}}
+{{SortBy:Issue, Updated}}
+<div class="article-section-container">
+<div class="label-menu-wrap">
+<span>
+<div class="label-menu hpe-in-menu-only" data-menu="{{MenuId}}">{{Menu}}</div>
+<i class="fa fa-caret-right" aria-hidden="true"></i>
+<div class="label-submenu hpe-in-submenu-only" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}">{{SubMenu}}</div>
+</span>
+</div>
+{{RepeatBegin}}
+{{If Counter<=TotalArticlesPage}}
+<div class="article-section-block hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}" >
+<div class="article-section-image flex"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="article-section-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="article-section-heading"><a href="{{HeadingLink}}"><h2 class="pageheading">{{Heading}}</h2></a></div>
+<div class="article-section-date"><i class="fa fa-calendar" aria-hidden="true"></i><span>{{MonthI3}} {{DayI}}, {{YearI}}</span></div>
+<div class="article-section-body pagebody">{{Body}}</div>
+<div class="article-section-more"><a href="{{HeadingLink}}" class=""><span>{{more}}<i class="fa fa-arrow-right_SEC"></i></span></a></div>
+</div>
+{{Else}}
+<div class="article-section-archive-list hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}" >
+<div class="article-section-archive-image flex"><a href="{{HeadingLink}}"><div style="background-image:url({{HeadingImage}});" class="article-section-archive-blur"></div><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="article-section-archive-heading"><li><a href="{{HeadingLink}}">{{Heading}}</a></li></div>
+<div class="article-section-archive-date"><i class="fa fa-calendar" aria-hidden="true"></i><span>{{MonthI3}} {{DayI}}, {{YearI}}</span></div>
+</div>
+{{EndIf}}
+{{If TotalArticlesArchive=0}}
+<style>.DisplayFlag{display:none;}</style>
+{{EndIf}}
+{{If Counter=TotalArticlesPage}}
+<div class="article-section-archive-block">
+<div  style="{{SubMenuNoRepeatCSSDisplay}}">
+<div class="article-section-archive-label-div DisplayFlag">
+<div class="article-section-archive-label">
+<span class="label-archive"><more class="hpe-custom-text-9"><script type="text/javascript">Section9();</script></more> {{SubMenu}}</span></span>
+</div>
+</div>
+</div>
+</div>
+{{EndIf}}
+{{RepeatEnd}}
+</div>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
+
+{{LayoutNewsLetter1Begin}}
+{{LayoutNewsLetter1Limit10}}
+{{ReplaceJavascriptChars:No}}{{Where:MaxIssue}}{{SortBy:Menu, Issue Desc}}
+<html><head></head><body style="font: 13px Trebuchet MS"><br><table cellpadding="3" style="background:#ECECEC;border:2px solid #088484;padding:5px;border-radius:10px;"><tbody><tr><td align="center" colspan="2"><a href="{{Home}}"><img style="max-width:300px;" src="Logo Image"></a><br><font size="3" face="Trebuchet MS"><strong>Welcome to {{Company}}!</strong></font></td></tr>
+{{RepeatBegin}}
+<tr><td style="background:#088484;height: 25px;border-radius: 3px;vertical-align: middle;" colspan="2" align="LEFT" style="{{SubMenuNoRepeatCSSDisplay}}"><font size="2" face="Trebuchet MS" ><a style="text-decoration:none;color:white;text-transform: uppercase;" href="{{SubMenuLink}}" target="_BLANK"><strong>{{SubMenuNoRepeat}}</strong></a></font></td></tr><tr>
+<td align="LEFT"><a href="{{HeadingLink}}"><img style="max-width:100px;" src="{{HeadingImage}}" alt="" /></a></td><td align="LEFT"><font size="2" face="Trebuchet MS"><strong><a style="text-decoration:none;" href="{{HeadingLink}}">{{Heading}}</a><strong></font></td></tr>
+{{RepeatEnd}}
+</tbody></table></body></html>
+{{LayoutNewsLetter1End}}
+
+{{ArticleValuesBegin}}
+<div class="hpe-article-detail" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
+<div class="sharebody layout_sharebody pageheading top_share" align="left">{{ShareToolsTop}}</div>
+<div><h1 class="pageheading layout_pageheading custom_color_{{MenuId}}">{{Heading}}</h1>
+</div>
+<div class="pagebody layout_pagebody">
+<table align="{{PictureAlignment}}" border=0 cellspacing=0 cellpadding=0 width=1>
+<tr><td align="{{PictureAlignment}}">
+<span>{{<img class="pagephoto layout_pagephoto" src=":Picture1:">}}</span></td>
+</tr>
+<tr>
+<td>
+<div class="pagephotocaption layout_pagephotocaption ">{{Picture1Caption}}</div>
+</td>
+</tr>
+</table>
+<table border="0" cellPadding="0" cellSpacing="0">
+<tr><td><div class="pagebyline layout_pagebyline" style="padding-right:0px;">{{By:<span style="color:#222222;padding-left:3px; padding-right:3px;">•</span>}}</div><div class="pageissuedate layout_pageissuedate custom_color_{{MenuId}}"><i class="fa fa-calendar" aria-hidden="true"></i><span>{{IssueDate}}</span></div></td></tr>
+</table>
+<div class="art-body">{{Body}}</div>
+<span class="pagesourceline layout_pagesourceline">{{<span style="color:#222222;"> — </span> :Source}}</span>
+<div class="sharebody layout_sharebody bottom_share" align="left">{{<br>:ShareToolsBottom}}</div></div>
+<div class="opinionbody layout_opinionbody" align="left">
+{{AllowComments:<br>}}
+</div>
+<div class="art-postComment"></div>
+<div class="pageruler layout_pageruler"><span style="FONT-SIZE: 0pt;"> </span></div>
+<style>.pagedropcap {float:none;} </style>
+</div>
+{{ArticleValuesEnd}}
+
+
+
+{{FormValuesBegin}} 
+{{ReplaceFieldHelpWithFieldCaption:Yes}}
+{{SelectValue:Select}}
+{{RequiredValue:*}}
+{{FieldHelpValue:<b class="tooltip tooltip-top-right"><<FieldHelp>></b>}}
+{{TextAreaCount:<label id="<<FieldName>>-memo4"></label> <label id="<<FieldName>>-memo42"></label>}}
+<script type="text/javascript" language="javascript" src="{{PutDomain}}lib/JQuery/jquery.js"></script>
+<script src="{{PutAppServer}}iframe-resizer-master/js/iframeResizer.contentWindow.js"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}customform.js?v=9.000009"></script>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}style.css?v=9.000009">
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script>
+$(document).ready(function() {
+$('input, textarea, select').each(function() {
+if ($(this).attr('required')) {
+$(this).siblings('b').text($(this).siblings('b').text() + ' is required.');
+}
+});
+});
+</script>
+<div class="formbody">
+<div class="body">
+<!--FormError-->
+<!--FormMessage-->
+<form class="custom-form" enctype="multipart/form-data" autocomplete="off" id="CustomForm" method="post" name="CustomForm" onsubmit="return Vailidate(this)" >
+<!--FKeys-->
+{{FormEmailSubject}} 
+{{FormEmailConfirmMessage}} 
+{{FormEmailFormat}} 
+{{FormEmailTo}} 
+{{FormEmailCC}}
+<header>
+{{FormTitle}}
+</header>
+<fieldset>
+<div class="system_text Header_text">
+{{FormHeader}}
+</div>
+
+<!--SystemFieldsBegin
+
+<section>
+<div class="label">
+<div class="inp_custom">
+<div class="formdivider formdivider_custom">
+<span>Items</span>
+</div>
+</div>
+
+<label class="input" style="width: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+<br>
+<div style="display: none;">{{FieldCaptionItem}}</div>
+<INPUT style="margin-top: 15px;"class="formfieldinput_ReadOnly" ID={{FieldNameItem}} readonly type ="text" NAME={{FieldNameItem}} VALUE={{FieldValueItem}}><br>
+
+<div style="display: none;">{{FieldCaptionAmount}}</div>
+<INPUT style="margin-top: 15px;"class="formfieldinput_ReadOnly" ID={{FieldNameAmount}} type ="text" NAME={{FieldNameAmount}} VALUE={{FieldValueAmount}} readonly><br>
+<INPUT TYPE=HIDDEN ID={{FieldNameInvoice}} type ="text" NAME={{FieldNameInvoice}} VALUE={{FieldValueInvoice}} readonly>
+</label>
+</div>
+
+</section>
+
+-->
+
+
+{{RepeatBegin}} 
+
+{{If FieldType=System}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=ReadOnly}}
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Divider}}
+
+<section>
+<div class="label">
+<div class="inp_custom">
+<div class="formdivider formdivider_custom">
+<span>{{FieldCaption}}</span>
+</div>
+</div>
+</div>
+</section>
+
+{{ElseIf FieldType=Memo}}
+
+<section>
+<label class="input">
+<label class="textarea">
+<{{TextArea}} class="formfieldinput formfieldinput_custom" id="{{FieldName}}" placeholder="{{FieldCaption}}{{FieldRequired}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}" {{FieldRequiredBrowser}}></{{TextArea}}>
+{{FieldHelp}}
+</label>
+<div class="formfieldname" style="text-align: left;">
+<label class="textarea">{{TextAreaCount}}</label>
+</div>
+</label>
+</section>
+
+{{ElseIf FieldType=File}}
+
+<section>
+<label for="file" class="inp1 input input-file">
+<div class="button"><input type="file" id="{{FieldName}}" name="{{FieldName}}" onchange="this.parentNode.nextSibling.value = this.value.replace(/.*[\/\\]/, '');"
+accept="image/*">Browse</div><input type="text" placeholder="Upload file" READONLY="" ID="{{FieldName}}-Browse" VALUE="" {{FieldRequiredBrowser}}>
+</label>
+{{FieldHelp}}
+</section>
+
+{{ElseIf FieldType=Password}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom"  placeholder="{{FieldCaption}}{{FieldRequired}}" {{FieldRequiredBrowser}} value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Date}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldCaption}}{{FieldRequired}}" id="{{FieldName}}" style="cursor: default;" type="{{FieldType}}" {{FieldRequiredBrowser}} value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=DropDown}}
+
+<section>
+<label class="label">
+<label class="select">
+<select id="{{FieldName}}" name="{{FieldName}}" {{FieldRequiredBrowser}}>
+{{FieldDropDown}}
+</select> <i></i>
+</label>
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Hidden}} 
+
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}" value="{{FieldDefaultValue}}"> 
+
+{{ElseIf FieldType=Decimal}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}" value="">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=Number}} 
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}">
+{{FieldHelp}}
+</label>
+</section>
+
+{{ElseIf FieldType=CheckBox}} 
+
+<section>
+<label class="checkbox state-error"><input id="{{FieldName}}" name="{{FieldName}}"  type="{{FieldType}}" name="checkbox"><i></i>{{FieldRequiredBrowser}}
+    
+    {{FieldCaption}}</label>
+</section>
+
+{{ElseIf FieldType=Captcha}}
+
+<section class="captcha-section">
+<label class="input">
+{{FieldCaptcha}}
+</label>
+<div class="captcha-text"><span>Type Security code from the above picture.</span></div>
+</section>
+
+{{Else}}
+
+<section>
+<label class="input">
+<INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}"  maxlength="{{FieldLength}}" placeholder="{{FieldCaption}}{{FieldRequired}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom" {{FieldRequiredBrowser}}>
+{{FieldHelp}}
+</label>
+</section>
+{{EndIf}} 
+
+{{RepeatEnd}}
+
+<div class="system_text footer_text">
+{{FormFooter}}
+</div>
+</fieldset>
+<footer>
+<button class="button" type="submit">{{FormButtonSubmit}}</button>
+</footer>
+</form>
+</div>
+<script language="JavaScript" type="text/javascript">LoadDoc("/get_sc.asp", "hcdiv", "");</script> 
+<script language="javascript">GetTooltipSys1();</script> 
+<script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+
+</div>
+
+{{FormValuesEnd}}
