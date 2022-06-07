@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript" language="javascript" src="https://bulletlink.com/lib/bl2.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://bulletlink.com/bootstrap.css">
+
+    <script>
+        function getParam(name) {
+            var url = location.href;
+            var urlx = new URL(url);
+            var pm = urlx.searchParams.get(name);
+            if (pm == null) {
+                return null;
+            }
+            return pm;
+        }
+        document.title = getParam("hlp").charAt(0).toUpperCase() + getParam("hlp").slice(1).replace(/-/g, " - ");
+    </script>
+</head>
+
+<body>
+
+
+    <div class="f_Popup4_box modal fade show" id="f_Popup4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="f_Popup4Label" style="display: block;" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto">
+            <div class="modal-content"><button type="button" class="f_Popup4_close btn-close position-absolute d-none" data-bs-dismiss="modal" aria-label="Close">✕</button>
+                <div class="modal-body text-center" style="white-space: pre-wrap;">
+                    <iframe id="f-mfp-iframe" class="f-mfp-iframe" allowfullscreen="" src="#" frameborder="0"></iframe>
+                    <script>
+                        document.getElementById("f-mfp-iframe").src = getParam("hlp") + ".htm";
+                    </script>
+                </div>
+            </div>
+        </div>
+        <style>
+            .modal-dialog-scrollable .modal-content {
+                max-height: none;
+                overflow: visible;
+            }
+            
+            .modal-body {
+                padding: 0;
+            }
+            
+            .f_Popup4_close {
+                right: -1rem;
+                z-index: 999;
+                top: -1rem;
+                background-color: #0d6efd;
+                border-radius: 50px;
+                padding: .5rem;
+                opacity: 1;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+                background-image: none;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                font-size: 18px
+            }
+            
+            .f_Popup4_close:hover {
+                color: #fff;
+                background-color: red;
+                opacity: 1
+            }
+            
+            .modal-content {
+                background: transparent;
+                border-width: 0;
+            }
+            
+            @media (min-width:992px) {
+                #f_Popup4 .modal-dialog {
+                    max-width: 70vw;
+                }
+            }
+            
+            @media (max-width:991px) {
+                #f_Popup4 .modal-dialog {
+                    max-width: 85vw;
+                }
+            }
+            
+            .f-mfp-iframe {
+                width: 100%;
+                min-height: 90vh;
+                height: 90vh;
+            }
+            
+            #f_loader {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%)
+            }
+            
+            #f_loader i {
+                font-size: 4rem;
+                color: #0d6efd;
+                opacity: 0.8
+            }
+            
+            .blll-next {
+                position: fixed;
+                z-index: 9999;
+                top: 50%;
+                right: 1%;
+                transform: translateY(-50%);
+            }
+            
+            .blll-prev {
+                position: fixed;
+                z-index: 9999;
+                top: 50%;
+                left: 1%;
+                transform: translateY(-50%);
+            }
+            
+            .blll-next:hover svg,
+            .blll-prev:hover svg {
+                fill: #555;
+            }
+        </style>
+    </div>
+    <span class="blll-next cus-cursor-pointer" onclick="document.getElementById('f-mfp-iframe').contentWindow.document.getElementsByClassName('carousel-control-next')[0].click();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+    </span>
+    <span class="blll-prev cus-cursor-pointer" onclick="document.getElementById('f-mfp-iframe').contentWindow.document.getElementsByClassName('carousel-control-prev')[0].click();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg>
+    </span>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
